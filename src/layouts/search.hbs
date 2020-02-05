@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script type="text/javascript">(function(){EventTarget.prototype.ol_originalAddEventListener=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(t,e){var n=this,r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];this.ol_originalAddEventListener(t,e,r),"click"===t&&setTimeout((function(){!window.OL_NOT_LOGIN_PAGE&&n.setAttribute&&n.setAttribute("data-ol-has-click-handler","")}),0)}})("")</script>
+{{> head}}
+    <meta property="og:url" content="/search/">
+	<meta property="og:type" content="website">
+<body class="type-search page-single" id="js-search-page">
+{{> header}}
+<div class="article container container-large"></div>
+{{> body}}
+<div id="search-results" aria-live="polite"></div>
+
+</article>
+
+<script>
+(function () {
+    var font = 'https:\/\/fonts.googleapis.com\/css?family=PT\x2bSerif:400,400i,700,700i\x26display=swap';
+	/*! gmt v1.19.0 | (c) 2019 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/go-make-things */
+!(function(e){var n=(document.body||document.getElementsByTagName("head")[0]).childNodes,t=n[n.length-1],o=window.document.styleSheets,d=document.createElement("link");d.rel="stylesheet",d.href=e,d.media="only x";var i=function(e){if(document.body)return e();setTimeout((function(){i(e)}))};i((function(){t.parentNode.insertBefore(d,t.nextSibling)}));var a=function(e){for(var n=d.href,t=o.length;t--;)if(o[t].href===n)return e();setTimeout((function(){a(e)}))},m=function(){d.media="all",d.addEventListener&&d.removeEventListener("load",m,!1)};d.addEventListener&&d.addEventListener("load",m,!1),a(m)})(font),"fonts"in document&&Promise.all([document.fonts.load("1em PT Serif"),document.fonts.load("700 1em PT Serif"),document.fonts.load("italic 1em PT Serif"),document.fonts.load("italic 700 1em PT Serif")]).then((function(){document.documentElement.className+=" fonts-loaded"}));
+			})();
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&amp;display=swap" media="all">
+
+{{> footer}}
+  </body>
+</html>
+
+<script>
+;(function (window, document, undefined) {
+
+	'use strict';
+
+	//
+	// Variables
+	//
+
+	var form = document.querySelector('#form-search');
+	var input = document.querySelector('#input-search');
+	var resultList = document.querySelector('#search-results');
+
+
+	//
+	// Methods
+	//
+
+	/**
+	 * Create the HTML for each result
+	 * @param  {Object} article The article
+	 * @param  {Number} id      The result index
+	 * @return {String}         The markup
+	 */
+	var createHTML = function (article, id) {
+		var html =
+			'<div id="search-result-' + id + '">' +
+				'<a href="' + article.url + '">' +
+					'<aside>' +
+						article.date +
+					'</aside>' +
+					'<h2>' + article.title + '</h2>' +
+					article.summary.slice(0, 150) + '...<br>' +
+					article.url +
+				'</a>' +
+			'</div>';
+		return html;
+	};
+
+	/**
+	 * Create the markup when no results are found
+	 * @return {String} The markup
+	 */
+	var createNoResultsHTML = function () {
+		return '<p>Sorry, no matches were found.</p>';
+	};
+
+	/**
+	 * Create the markup for results
+	 * @param  {Array} results The results to display
+	 * @return {String}        The results HTML
+	 */
+	var createResultsHTML = function (results) {
+		var html = '<p>Found ' + results.length + ' matching articles</p>';
+		html += results.map(function (article, index) {
+			return createHTML(article, index);
+		}).join('');
+		return html;
+	};
+
+	/**
+	 * Search for matches
+	 * @param  {String} query The term to search for
+	 */
+	var search = function (query) {
+
+		// Variables
+		var reg = new RegExp(query, 'gi');
+		var priority1 = [];
+		var priority2 = [];
+
+		// Search the content
+		searchIndex.forEach(function (article) {
+			if (reg.test(article.title)) return priority1.push(article);
+			if (reg.test(article.content)) priority2.push(article);
+		});
+
+		// Combine the results into a single array
+		var results = [].concat(priority1, priority2);
+
+		// Display the results
+		resultList.innerHTML = results.length < 1 ? createNoResultsHTML() : createResultsHTML(results);
+
+	};
+
+	/**
+	 * Handle submit events
+	 */
+	var submitHandler = function (event) {
+		event.preventDefault();
+		search(input.value);
+	};
+
+	/**
+	 * Remove site: from the input
+	 */
+	var clearInput = function () {
+		input.value = input.value.replace(' site:your-domain.com', '');
+	};
+
+
+	//
+	// Inits & Event Listeners
+	//
+
+	// Make sure required content exists
+	if (!form || !input || !resultList || !searchIndex) return;
+
+	// Clear the input field
+	clearInput();
+
+	// Create a submit handler
+	form.addEventListener('submit', submitHandler, false);
+
+})(window, document);
+</script>

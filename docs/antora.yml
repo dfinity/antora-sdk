@@ -1,0 +1,5 @@
+name: ic-doc-ui
+title: Internet Computer UI
+version: master
+nav:
+- modules/ROOT/nav.adoc

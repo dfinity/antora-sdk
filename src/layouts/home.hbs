@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{> head}}
+<h1 class="page">{{{page.title}}}</h1>
+    {{#if site.url}}
+    <link rel="canonical" href="{{site.url}}">
+    {{/if}}
+    <link href="{{uiRootPath}}/css/HomePageStyles.css" rel="stylesheet" type="text/css" />
+    <link href="{{uiRootPath}}/css/home.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="home">
+{{> header}}
+{{> body-home}}
+{{> footer}}
+  </body>
+</html>
