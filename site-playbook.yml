@@ -1,0 +1,29 @@
+site:
+    title: DFINITY for Developers
+    url: https://sdk.dfinity.org
+    #url: file://build/site/documentation/
+    #url: http://localhost:5000
+    #start_page: dfinity:index.adoc
+
+content:
+    sources:
+    - url: ~/DFINITY-PUBLIC-DOC/documentation
+      #start_path: 
+      branches: HEAD
+ui:
+  bundle:
+    #url: ./ic-doc-ui/build/ui-bundle.zip
+    url: ./4column-ic-doc-ui/build/ui-bundle.zip
+
+    #snapshot: false
+  supplemental_files: ./supplemental_ui
+
+asciidoc:
+  attributes:
+    proglang: Motoko
+    company-id: DFINITY
+    toc: ~
+    platform: Internet Computer platform
+    IC: Internet Computer
+    sdk-short-name: DFINITY Canister SDK
+    sdk-long-name: DFINITY Canister Software Development Kit (SDK)
