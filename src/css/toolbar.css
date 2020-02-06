@@ -1,15 +1,13 @@
 .toolbar {
   color: var(--toolbar-font-color);
   align-items: center;
-  background-color: var(--toolbar-background);
+  background-color: var(--color-white);
   box-shadow: 0 1px 0 var(--toolbar-border-color);
   display: flex;
-  font-size: calc(15 / var(--rem-base) * 1rem);
   height: var(--toolbar-height);
   justify-content: flex-start;
   position: sticky;
-  top: var(--navbar-height);
-  margin-bottom: 40px; /* added */
+  top: var(--navivation-height);
   z-index: var(--z-index-toolbar);
 }
 
@@ -27,31 +25,6 @@
   padding: 0;
   width: 2.5rem;
   margin-right: -0.25rem;
-}
-
-.toolbar .edit-this-page {
-  width: 1.75em;
-  height: 1.75em;
-}
-
-.toolbar .edit-this-page a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background: url(../img/edit.svg) no-repeat center;
-  background-size: 100%;
-  /* vertical-align: top; */
-  color: transparent;
-  margin-right: 18px;
-}
-
-@media screen and (min-width: 1024px) {
-  .nav-toggle {
-    display: none;
-  }
 }
 
 .nav-toggle.is-active {
@@ -78,7 +51,15 @@
   padding-right: 0.5rem;
 }
 
+
+.toolbar .edit-this-page a {
+  color: var(--toolbar-muted-color);
+}
+
 @media screen and (min-width: 1024px) {
+  .nav-toggle {
+    display: none;
+  }
   .edit-this-page {
     display: block;
   }

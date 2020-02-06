@@ -113,10 +113,3 @@ module.exports = exportTasks(
   previewBuildTask,
   packTask
 )
-
-function callbackTask(cb) {
-  // `cb()` should be called by some async work
-  cb();
-}
-
-exports.default = callbackTask;

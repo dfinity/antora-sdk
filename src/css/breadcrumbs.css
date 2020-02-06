@@ -24,8 +24,6 @@ a + .breadcrumbs {
 }
 
 .breadcrumbs li {
-  color: #2a67c9; /* added */
-  font-size: 0.85rem; /* added */
   display: inline;
   margin: 0;
 }

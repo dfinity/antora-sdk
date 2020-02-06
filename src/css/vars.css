@@ -16,19 +16,6 @@
   --color-jet-70: #222;
   --color-jet-80: #191919;
   --color-black: #000;
-  --color-main-black: #292a2e;
-  --color-main-blue: #0081ff;
-  --color-main-yellow: #fab13b;
-  --color-acc-yellow: #fed791;
-  --color-acc-yellow-15s: #fff2d9;
-  --color-acc-green: #9eee07;
-  --color-acc-pink: rgb(249, 210, 212);
-  --color-acc-blue: #89cae7;
-  --color-acc-blue-95: #e9f5fb;
-  --color-acc-caution-95: #f7edf7;
-  --color-acc-important-95: #fbeaea;
-  --color-acc-tip-95: #ecf8ed;
-
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */
@@ -98,7 +85,7 @@
   --abstract-background: var(--color-smoke-70);
   --abstract-font-color: var(--color-jet-20);
   --abstract-border-color: var(--panel-border-color);
-  --admonition-background: var(--color-acc-yellow-15s);
+  --admonition-background: var(--panel-background);
   --admonition-label-font-weight: var(--body-font-weight-bold);
   --caption-font-color: var(--color-gray-70);
   --caption-font-weight: var(--body-font-weight-bold);
@@ -123,7 +110,7 @@
   --footer-font-color: var(--color-gray-70);
   --footer-link-font-color: var(--color-jet-80);
   /* dimensions */
-  --navbar-height: calc(112 / var(--rem-base) * 1rem);
+  --navbar-height: calc(63 / var(--rem-base) * 1rem);
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);
   --drawer-height: var(--toolbar-height);
   --body-top: var(--navbar-height);
@@ -132,7 +119,6 @@
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-height: calc(var(--nav-height) - var(--drawer-height));
   --nav-panel-height--desktop: calc(var(--nav-height--desktop) - var(--drawer-height));
-  --nav-width: calc(270 / var(--rem-base) * 1rem);
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
   --doc-max-width--desktop: calc(828 / var(--rem-base) * 1rem);
   /* stacking */
@@ -140,4 +126,34 @@
   --z-index-toolbar: 2;
   --z-index-page-version-menu: 3;
   --z-index-navbar: 4;
+
+  /* DFINITY VARIABLES */
+  --navivation-height: 80px;
+  --nav-width: 250px;
+  
+  --color-content-primary: rgba(51,51,51,1);
+  --color-content-secondary: #91939b;
+  --color-content-white: #fff;
+  --color-content-white--faded: rgba(255,255,255,0.6);
+  --color-content-highlight: #1A75FF;
+  
+  --color-white: #fff;
+  --color-highlight: #1A75FF;
+  
+  --spacing-xs: 1em;
+  --spacing-s: 1.5em;
+  --spacing-m: 2em;
+  --spacing-l: 3em;
+  --spacing-xl: 4em;
+  
+  --width-mobile: 30em;
+  --width-tablet: 48em;
+  --width-desktop: 1200px;
+  
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --navivation-height: 105px;
+  }
 }

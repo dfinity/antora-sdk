@@ -28,56 +28,9 @@
 }
 
 .doc > h1.page:first-child {
-  font-size: calc(40 / var(--rem-base) * 1rem);
-  margin: 2.75rem 0 1.5rem 0;
-  color: #000;
+  font-size: calc(36 / var(--rem-base) * 1rem);
+  margin: 1.5rem 0;
 }
-
-.doc h2 {
-  font-size: calc(32 / var(--rem-base) * 1rem);
-  color: var(--color-gray-50);
-}
-
-.doc h3 {
-  font-size: calc(24 / var(--rem-base) * 1rem);
-  color: var(--color-gray-50);
-  margin-top: 1.75rem;
-}
-
-.doc h4 {
-  font-size: calc(20 / var(--rem-base) * 1rem);
-  font-weight: 500;
-  color: var(--color-gray-50);
-  margin-top: 1.75rem;
-}
-
-/*
-div#toc {
-  float: right;
-  max-width: 240px;
-  padding: 10px;
-  text-align: left;
-  border: 1px solid #000;
-}
-
-div#toctitle,
-ul.sectionlevel1 {
-  line-height: 19px;
-  padding-bottom: 5px;
-}
-
-div#toctitle {
-  margin-left: 0;
-}
-
-.toc ul {
-  list-style: none;
-}
-
-.toc li {
-  margin-left: 0;
-}
-*/
 
 @media screen and (min-width: 769px) {
   .doc > h1.page:first-child {
@@ -88,6 +41,13 @@ div#toctitle {
 #preamble + .sect1,
 .doc .sect1 + .sect1 {
   margin-top: 2rem;
+}
+
+.doc h1.sect0 {
+  background: var(--abstract-background);
+  font-size: 1.8em;
+  margin: 1.5rem -1rem 0;
+  padding: 0.5rem 1rem;
 }
 
 .doc h2:not(.discrete) {
@@ -214,7 +174,8 @@ div#toctitle {
 .doc .literalblock,
 .doc .sidebarblock,
 .doc .verseblock,
-.doc .quoteblock {
+.doc .quoteblock,
+.doc .partintro {
   margin: 1rem 0 0;
 }
 
@@ -274,7 +235,6 @@ div#toctitle {
 .doc .admonitionblock p,
 .doc .admonitionblock td.content {
   font-size: calc(16 / var(--rem-base) * 1rem);
-  opacity: 1;
 }
 
 .doc .admonitionblock td.content > :first-child {
@@ -296,7 +256,6 @@ div#toctitle {
   padding: 1rem 1rem 0.75rem;
   background: var(--admonition-background);
   width: 100%;
-  /* opacity: 0.2; */
 }
 
 .doc .admonitionblock .icon {
@@ -318,27 +277,14 @@ div#toctitle {
   color: var(--caution-on-color);
 }
 
-.doc .admonitionblock.caution td.content {
-  background-color: var(--color-acc-caution-95);
-}
-
 .doc .admonitionblock.important .icon {
-  /* display: none; added */
   background-color: var(--important-color);
   color: var(--important-on-color);
-}
-
-.doc .admonitionblock.important td.content {
-  background-color: var(--color-acc-important-95);
 }
 
 .doc .admonitionblock.note .icon {
   background-color: var(--note-color);
   color: var(--note-on-color);
-}
-
-.doc .admonitionblock.note td.content {
-  background-color: var(--color-acc-blue-95);
 }
 
 .doc .admonitionblock.tip .icon {
@@ -425,7 +371,7 @@ div#toctitle {
 .doc ol,
 .doc ul {
   margin: 0;
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 2rem;
 }
 
 .doc ol.arabic {
@@ -553,13 +499,10 @@ div#toctitle {
   margin-top: 0;
 }
 
+/* NEEDS REVIEW prevent pre in table from causing article to exceed bounds */
 .doc .tableblock pre,
 .doc .listingblock.wrap pre {
   white-space: pre-wrap;
-}
-
-.doc .card .listingblock pre {
-  border: solid 3px var(--color-smoke-90);
 }
 
 .doc pre:not(.highlight),
@@ -686,9 +629,4 @@ div#toctitle {
   font-size: 1.1em;
   font-weight: var(--body-font-weight-bold);
   line-height: calc(1 / 1.1);
-}
-
-p.app {
-  text-align: center;
-  margin: 0;
 }

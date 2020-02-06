@@ -6,20 +6,15 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
   box-sizing: border-box;
-  font-size: var(--body-font-size);
+  font-size: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
-@media screen and (min-width: 1024px) {
-  html {
-    font-size: var(--body-font-size--desktop);
-  }
-}
 
 body {
   background: var(--body-background);
@@ -27,7 +22,6 @@ body {
   font-family: var(--body-font-family);
   line-height: var(--body-line-height);
   margin: 0;
-  hyphens: manual !important;
 }
 
 a {
@@ -36,6 +30,10 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+a:visited {
+  color: inherit;
 }
 
 code,
@@ -70,23 +68,4 @@ button {
 button::-moz-focus-inner {
   border: none;
   padding: 0;
-}
-
-/* Hyphens */
-p,
-h1,
-h2,
-h3,
-h4 {
-  -webkit-hyphens: manual !important;
-  -moz-hyphens: manual !important;
-  -ms-hyphens: manual !important;
-  hyphens: manual !important;
-}
-
-.doc h1 {
-  color: #7e57c2;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
 }

@@ -1,47 +1,22 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://dfinity.org"><img src="{{uiRootPath}}/img/sm-logo-white-text.svg" alt="DFINITY"></a>
-      <a class="navbar-item" href="{{or site.url (or siteRootUrl siteRootPath)}}">{{site.title}}</a>
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <img class="header-logo" src="{{uiRootPath}}/img/logo.svg">
+      <a class="header-logo-text" href="{{or site.url (or siteRootUrl siteRootPath)}}">{{site.title}}</a>
     </div>
+    <button class="navbar-burger" data-target="topbar-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Samples</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Code</a>
-            <a class="navbar-item" href="#">Apps</a>
-            <a class="navbar-item" href="#">Microservices</a>
-          </div>
-        </div>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="https://dfinity.org/community/">Community</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Events</a>
-            <a class="navbar-item" href="#">Join us</a>
-            <a class="navbar-item" href="#">Meetups</a>
-          </div>
-        </div>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Support</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Self-service</a>
-            <a class="navbar-item" href="#">Ask for help/a>
-            <a class="navbar-item" href="#">FAQ</a>
-          </div>
-        </div>
-        <div class="navbar-item is-hoverable">
-          <a href="{{siteRootPath}}/documentation/search.html"<div class="search"></div></a>
-        <div class="navbar-item">
-          <span class="control">
-            <a class="button is-primary" href="mailto:doc@dfinity.org?subject={{page.title}}">Contact us</a>
-          </span>
-        </div>
+        <a class="navbar-item" href="#">Home</a>
+        <a class="navbar-item" href="#">FAQ</a>
+        <a class="navbar-item" href="#">Developers</a>
+        <a class="navbar-item" href="#">Data Centers</a>
+        <a class="navbar-item" href="#">Careers</a>
+        <a class="navbar-item" href="#">Media</a>
       </div>
     </div>
   </nav>
