@@ -84,3 +84,43 @@
 .hljs-strong {
   font-weight: var(--monospace-font-weight-bold);
 }
+
+/* prevent click event path in 05-copy-code.js from including children of the button */
+.copy-button * {
+  pointer-events: none;
+}
+
+.copy-button {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  opacity: 0.3;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease-out;
+}
+
+.copy-button:hover,
+.copy-button:focus {
+  opacity: 0.8;
+}
+
+.copy-button:hover .copy-label,
+.copy-button:focus .copy-label {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+.copy-label {
+  margin-right: 0.5em;
+  line-height: 1;
+  margin-top: -3px;
+  font-family: var(--monospace-font-family);
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.2s ease-out, opacity 0.1s ease-out;
+}

@@ -119,7 +119,7 @@
   --example-border-color: var(--color-gray-70);
   --kbd-background: var(--panel-background);
   --kbd-border-color: var(--color-gray-10);
-  --pre-background: var(--panel-background);
+  --pre-background: var(--color-smoke-50);
   --pre-border-color: var(--panel-border-color);
   --pre-annotation-font-color: var(--color-gray-10);
   --quote-background: var(--panel-background);
