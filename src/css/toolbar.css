@@ -1,13 +1,14 @@
 .toolbar {
   color: var(--toolbar-font-color);
   align-items: center;
-  background-color: var(--color-white);
+  background-color: var(--toolbar-background);
   box-shadow: 0 1px 0 var(--toolbar-border-color);
   display: flex;
+  font-size: calc(15 / var(--rem-base) * 1rem);
   height: var(--toolbar-height);
   justify-content: flex-start;
   position: sticky;
-  top: var(--navivation-height);
+  top: var(--navbar-height);
   z-index: var(--z-index-toolbar);
 }
 
@@ -25,6 +26,12 @@
   padding: 0;
   width: 2.5rem;
   margin-right: -0.25rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-toggle {
+    display: none;
+  }
 }
 
 .nav-toggle.is-active {
@@ -51,19 +58,12 @@
   padding-right: 0.5rem;
 }
 
-
-.toolbar .edit-this-page a {
-  color: var(--toolbar-muted-color);
-}
-
 @media screen and (min-width: 1024px) {
-  .nav-toggle {
-    display: none;
-  }
   .edit-this-page {
     display: block;
   }
-  .toolbar {
-    display: none;
-  }
+}
+
+.toolbar .edit-this-page a {
+  color: var(--toolbar-muted-color);
 }

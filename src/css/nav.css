@@ -1,67 +1,78 @@
-html.is-clipped--nav {
-  overflow-y: hidden;
-}
-
 .nav-container {
-  background: var(--color-white);
   position: fixed;
-  top: calc(var(--navivation-height) + var(--toolbar-height));
-  z-index: 1;
+  top: var(--navbar-height);
   left: 0;
   width: 100%;
-  height: calc(100vh - var(--navivation-height) - var(--toolbar-height));
-  overflow: hidden;
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  z-index: var(--z-index-nav);
   visibility: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
-.nav-container.is-active {
-  visibility: visible;
-}
-
-.nav-panel-menu {
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.nav {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - var(--toolbar-height));
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .nav-container {
     width: var(--nav-width);
   }
 }
 
 @media screen and (min-width: 1024px) {
+  .nav-container {
+    font-size: calc(15.5 / var(--rem-base) * 1rem);
+    flex: none;
+    position: static;
+    top: 0;
+    visibility: visible;
+  }
+}
+
+.nav-container.is-active {
+  visibility: visible;
+}
+
+.nav {
+  background: var(--nav-background);
+  position: relative;
+  top: var(--toolbar-height);
+  height: var(--nav-height);
+}
+
+@media screen and (min-width: 769px) {
   .nav {
-    top: var(--navivation-height);
+    box-shadow: 0.5px 0 3px var(--nav-border-color);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    top: var(--navbar-height);
     box-shadow: none;
     position: sticky;
     height: var(--nav-height--desktop);
+    border-right: 1px solid var(--panel-border-color);
   }
+}
 
-  .nav-container {
-    flex: none;
-    position: sticky;
-    visibility: visible;
-    top: calc(var(--navivation-height));
-    height: calc(100vh - var(--navivation-height));
-  }
+.nav .panels {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+}
+
+html.is-clipped--nav {
+  overflow-y: hidden;
+}
+
+.nav-panel-menu {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  height: var(--nav-panel-height);
+}
+
+@media screen and (min-width: 1024px) {
   .nav-panel-menu {
     height: var(--nav-panel-height--desktop);
   }
 }
-
-
 
 .nav-panel-menu:not(.is-active) .nav-menu {
   opacity: 0.75;
@@ -87,6 +98,7 @@ html.is-clipped--nav {
 }
 
 .nav-menu {
+  flex-grow: 1;
   min-height: 0;
   width: 100%;
   padding: 0.5rem 0.75rem;
@@ -157,9 +169,13 @@ html.is-clipped--nav {
 }
 
 .nav-panel-explore {
-  background: var(--color-white);
+  background: var(--nav-background);
   display: flex;
   flex-direction: column;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   max-height: calc(50% + var(--drawer-height));
 }
 
@@ -246,3 +262,9 @@ html.is-clipped--nav {
   opacity: 0.9;
   font-weight: var(--body-font-weight-bold);
 }
+
+/*
+.nav-panel-explore .component .is-latest a::after {
+  content: " (latest)";
+}
+*/

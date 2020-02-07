@@ -1,4 +1,28 @@
 :root {
+
+    /* DFINITY VARIABLES */
+    --navivation-height: 80px;
+    --nav-width: 250px;
+    
+    --color-content-primary: rgba(51,51,51,1);
+    --color-content-secondary: #91939b;
+    --color-content-white: #fff;
+    --color-content-white--faded: rgba(255,255,255,0.6);
+    --color-content-highlight: #1A75FF;
+    --color-white: #fff;
+    --color-highlight: #1A75FF;
+    
+    --spacing-xs: 1em;
+    --spacing-s: 1.5em;
+    --spacing-m: 2em;
+    --spacing-l: 3em;
+    --spacing-xl: 4em;
+    
+    --width-mobile: 30em;
+    --width-tablet: 48em;
+    --width-desktop: 1200px;
+
+
   /* colors */
   --color-white: #fff;
   --color-smoke-10: #fefefe;
@@ -29,12 +53,12 @@
   --monospace-font-weight-bold: 500;
   /* base */
   --body-background: var(--color-white);
-  --panel-background: var(--color-smoke-30);
-  --panel-border-color: var(--color-smoke-90);
+  --panel-background: var(--color-white);
+  --panel-border-color: var(--color-smoke-70);
   /* navbar */
-  --navbar-background: var(--color-jet-80);
-  --navbar-font-color: var(--color-white);
-  --navbar_hover-background: var(--color-black);
+  --navbar-background: var(--color-white);
+  --navbar-font-color: var(--color-content-primary);
+  /* --navbar_hover-background: var(--color-black); */
   --navbar-button-background: var(--color-white);
   --navbar-button-border-color: var(--panel-border-color);
   --navbar-button-font-color: var(--body-font-color);
@@ -110,7 +134,7 @@
   --footer-font-color: var(--color-gray-70);
   --footer-link-font-color: var(--color-jet-80);
   /* dimensions */
-  --navbar-height: calc(63 / var(--rem-base) * 1rem);
+  --navbar-height: calc(80 / var(--rem-base) * 1rem);
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);
   --drawer-height: var(--toolbar-height);
   --body-top: var(--navbar-height);
@@ -119,6 +143,7 @@
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-height: calc(var(--nav-height) - var(--drawer-height));
   --nav-panel-height--desktop: calc(var(--nav-height--desktop) - var(--drawer-height));
+  --nav-width: calc(270 / var(--rem-base) * 1rem);
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
   --doc-max-width--desktop: calc(828 / var(--rem-base) * 1rem);
   /* stacking */
@@ -127,33 +152,4 @@
   --z-index-page-version-menu: 3;
   --z-index-navbar: 4;
 
-  /* DFINITY VARIABLES */
-  --navivation-height: 80px;
-  --nav-width: 250px;
-  
-  --color-content-primary: rgba(51,51,51,1);
-  --color-content-secondary: #91939b;
-  --color-content-white: #fff;
-  --color-content-white--faded: rgba(255,255,255,0.6);
-  --color-content-highlight: #1A75FF;
-  
-  --color-white: #fff;
-  --color-highlight: #1A75FF;
-  
-  --spacing-xs: 1em;
-  --spacing-s: 1.5em;
-  --spacing-m: 2em;
-  --spacing-l: 3em;
-  --spacing-xl: 4em;
-  
-  --width-mobile: 30em;
-  --width-tablet: 48em;
-  --width-desktop: 1200px;
-  
-}
-
-@media screen and (min-width: 1024px) {
-  :root {
-    --navivation-height: 105px;
-  }
 }

@@ -1,13 +1,5 @@
-.body {
-  width: 100%;
-  max-width: var(--width-desktop);
-  margin: 0 auto;
-  padding-top: 80px;
-}
-
 @media screen and (min-width: 1024px) {
   .body {
     display: flex;
-    padding-top: 105px;
   }
 }

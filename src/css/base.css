@@ -11,10 +11,15 @@ body {
 
 html {
   box-sizing: border-box;
-  font-size: 100%;
+  font-size: var(--body-font-size);
   -webkit-text-size-adjust: 100%;
 }
 
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: var(--body-font-size--desktop);
+  }
+}
 
 body {
   background: var(--body-background);
@@ -30,10 +35,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-a:visited {
-  color: inherit;
 }
 
 code,
