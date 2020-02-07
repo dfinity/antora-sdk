@@ -26,6 +26,7 @@ body {
   color: var(--body-font-color);
   font-family: var(--body-font-family);
   line-height: var(--body-line-height);
+  -webkit-font-smoothing: antialiased;
   margin: 0;
 }
 

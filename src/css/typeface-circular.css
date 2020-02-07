@@ -1,0 +1,19 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Circular Std';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Circular Std Book'),
+    url(../fonts/CircularStd-Book.woff) format('woff'),
+    url(../fonts/CircularStd-Book.otf) format('otf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Circular Std';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Circular Std Bold'),
+    url(../fonts/CircularStd-Bold.woff) format('woff'),
+    url(../fonts/CircularStd-Bold.otf) format('otf');
+}

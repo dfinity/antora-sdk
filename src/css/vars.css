@@ -47,8 +47,8 @@
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
   --body-font-color: var(--color-jet-70);
-  --body-font-family: "Roboto", sans-serif;
-  --body-font-weight-bold: 500;
+  --body-font-family: 'Circular Std', sans-serif;
+  --body-font-weight-bold: 600;
   --monospace-font-family: "Roboto Mono", monospace;
   --monospace-font-weight-bold: 500;
   /* base */
@@ -72,7 +72,7 @@
   --nav-line-height: 1.35;
   --nav-heading-font-color: var(--color-jet-30);
   --nav-muted-color: var(--color-gray-70);
-  --nav-panel-divider-color: var(--color-smoke-90);
+  --nav-panel-divider-color: var(--panel-border-color);
   --nav-secondary-background: var(--color-smoke-70);
   /* toolbar */
   --toolbar-background: var(--panel-background);
