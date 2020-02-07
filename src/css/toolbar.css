@@ -63,4 +63,7 @@
   .edit-this-page {
     display: block;
   }
+  .toolbar {
+    display: none;
+  }
 }

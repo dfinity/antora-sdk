@@ -1,0 +1,22 @@
+= Hardware and Software Requirements
+Author Name
+:idprefix:
+:idseparator: -
+:!example-caption:
+:!table-caption:
+
+image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
+Platonem complectitur mediocritatem ea eos.
+Ei nonumy deseruisse ius.
+Mel id omnes verear.
+Vis no velit audiam, sonet <<dependencies,praesent>> eum ne.
+*Prompta eripuit* nec ad.
+Integer diam enim, dignissim eget eros et, ultricies mattis odio.
+Vestibulum consectetur nec urna a luctus.
+Quisque pharetra tristique arcu fringilla dapibus.
+Curabitur ut massa aliquam, cursus enim et, accumsan lectus.
+
+== TEST
+
+Test paragraph.
+
