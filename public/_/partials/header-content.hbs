@@ -1,0 +1,23 @@
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img class="header-logo" src="{{uiRootPath}}/img/logo.svg">
+      <a class="navbar-item logo-text" href="{{or site.url (or siteRootUrl siteRootPath)}}">{{site.title}}</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="http://dfinity.org">Home</a>
+        <a class="navbar-item" href="http://dfinity.org/faq">FAQ</a>
+        <a class="navbar-item current" href="#">Docs</a>
+        <a class="navbar-item" href="http://dfinity.org/foundation">Foundation</a>
+        <a class="navbar-item" href="http://dfinity.org/careers">Careers</a>
+        <a class="navbar-item" href="http://dfinity.org/media">Media</a>
+      </div>
+    </div>
+  </nav>
+</header>
