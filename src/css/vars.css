@@ -1,26 +1,26 @@
 :root {
 
-    /* DFINITY VARIABLES */
-    --navivation-height: 80px;
-    --nav-width: 250px;
-    
-    --color-content-primary: rgba(51,51,51,1);
-    --color-content-secondary: #91939b;
-    --color-content-white: #fff;
-    --color-content-white--faded: rgba(255,255,255,0.6);
-    --color-content-highlight: #1A75FF;
-    --color-white: #fff;
-    --color-highlight: #1A75FF;
-    
-    --spacing-xs: 1em;
-    --spacing-s: 1.5em;
-    --spacing-m: 2em;
-    --spacing-l: 3em;
-    --spacing-xl: 4em;
-    
-    --width-mobile: 30em;
-    --width-tablet: 48em;
-    --width-desktop: 1200px;
+  /* DFINITY VARIABLES */
+  --navivation-height: 80px;
+  --nav-width: 250px;
+  
+  --color-content-primary: rgba(51,51,51,1);
+  --color-content-secondary: #91939b;
+  --color-content-white: #fff;
+  --color-content-white--faded: rgba(255,255,255,0.6);
+  --color-content-highlight: #1A75FF;
+  --color-white: #fff;
+  --color-highlight: #1A75FF;
+  
+  --spacing-xs: 1em;
+  --spacing-s: 1.5em;
+  --spacing-m: 2em;
+  --spacing-l: 3em;
+  --spacing-xl: 4em;
+  
+  --width-mobile: 30em;
+  --width-tablet: 48em;
+  --width-desktop: 1200px;
 
 
   /* colors */
