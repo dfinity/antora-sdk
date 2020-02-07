@@ -20,8 +20,18 @@ body {
 
 .header-logo {
   width: 60px;
-  margin-right: var(--spacing-xs);
+  margin-right: 0.5em;
   margin-left: 1.5rem;
+}
+
+
+.logo-text {
+  text-transform: uppercase;
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+}
+
+.current {
+  opacity: 1 !important;
 }
 
 .navbar a {
