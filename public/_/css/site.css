@@ -1618,6 +1618,15 @@ body {
   text-transform: uppercase;
   font-size: 0.90625rem;
   font-size: calc(14.5/var(--rem-base)*1rem);
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.docs {
+  color: #8e8e8e;
+  color: var(--color-gray-30);
+
+  font-weight: 300;
 }
 
 .current {
