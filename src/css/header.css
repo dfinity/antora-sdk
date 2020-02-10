@@ -28,7 +28,7 @@ body {
 .logo-text {
   text-transform: uppercase;
   font-size: calc(14.5 / var(--rem-base) * 1rem);
-  letter-spacing: 2px;
+  letter-spacing: 8px;
   font-weight: 600;
 }
 

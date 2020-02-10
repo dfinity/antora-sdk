@@ -53,6 +53,8 @@
   --color-content-highlight: #1A75FF;
   --color-white: #fff;
   --color-highlight: #1A75FF;
+  --color-blue-grey: #292A2E;
+
   
   --spacing-xs: 1em;
   --spacing-s: 1.5em;
@@ -1618,7 +1620,7 @@ body {
   text-transform: uppercase;
   font-size: 0.90625rem;
   font-size: calc(14.5/var(--rem-base)*1rem);
-  letter-spacing: 2px;
+  letter-spacing: 8px;
   font-weight: 600;
 }
 
@@ -1963,24 +1965,100 @@ body {
 }
 
 footer.footer {
-  background-color: #e1e1e1;
-  background-color: var(--footer-background);
-  color: #5d5d5d;
-  color: var(--footer-font-color);
-  font-size: 0.9375rem;
-  font-size: calc(15/var(--rem-base)*1rem);
+  background-color: #292A2E;
+  background-color: var(--color-blue-grey);
   line-height: 1.6;
   line-height: var(--footer-line-height);
-  padding: 1.5rem;
+  padding: 3em 0;
 }
 
-.footer p {
-  margin: 0.5rem 0;
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 12px;
 }
 
-.footer a {
-  color: #191919;
-  color: var(--footer-link-font-color);
+.footer-logo {
+  width: 60px;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    'col0 col1'
+    'col2 col3'
+    'social social';
+  margin: 3em 0;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.footer-link {
+  text-decoration: none;
+  opacity: 0.8;
+  width: 100%;
+  display: block;
+  padding-bottom: 0.5em;
+  color: white;
+}
+
+a.footer-link:hover,
+a.footer-link:focus {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.social-icons {
+  grid-area: social;
+  display: grid;
+  grid-template-columns: repeat(6, 21px);
+  grid-column-gap: 1em;
+  margin-top: 3em;
+}
+
+.social-icon-link {
+  opacity: 0.8;
+}
+
+.social-icon-link:hover,
+.social-icon-link:focus {
+  opacity: 1;
+}
+
+.social-icon-link svg {
+  height: 21px;
+  width: 21px;
+}
+
+.social-icon-link svg path {
+  fill: white;
+}
+
+.footer-copyright {
+  font-size: 0.75em;
+  color: #91939b;
+  color: var(--color-content-secondary);
+}
+
+@media screen and (min-width: 1024px) {
+
+  .footer-nav {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 'col0 col1 col2 col3 social social';
+    margin: 5em 0;
+  }
+
+  .social-icons {
+    margin-top: 0;
+    justify-self: end;
+    grid-column-gap: 1.5em;
+  }
+
 }
 
 /*! Adapted from the GitHub style by Vasily Polovnyov <vast@whiteants.net> */
