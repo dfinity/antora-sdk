@@ -1,3 +1,3 @@
-'use strict'
+"use strict";
 
-module.exports = (value) => (value || 0) + 1
+module.exports = value => (value || 0) + 1;
