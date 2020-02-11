@@ -3,6 +3,7 @@
     <a href="http://www.dfinity.org"><img class="footer-logo" src="{{uiRootPath}}/img/logo.svg"></a>
     <nav class="footer-nav">
       <div class="col1">
+        <h5 class="footer-header">Developers</h5>
         <a class="footer-link" href="http://www.dfinity.org/faq">
           FAQ
         </a>
@@ -15,39 +16,29 @@
       </div>
 
       <div class="col2">
+        <h5 class="footer-header">Team</h5>
         <a class="footer-link" href="http://www.dfinity.org/foundation">
           Foundation
         </a>
-        <a class="footer-link" href="http://www.dfinity.org/foundation#community">
-          Community
-        </a>
         <a class="footer-link" href="http://www.dfinity.org/foundation#events">
           Events
+        </a>
+        <a class="footer-link" href="http://www.dfinity.org/careers">
+          Careers
         </a>
       </div>
 
 
       <div class="col3">
-        <a class="footer-link" href="http://www.dfinity.org/careers">
-          Careers
-        </a>
+        <h5 class="footer-header">Media</h5>
         <a class="footer-link" href="http://www.dfinity.org/media">
-          Media
+          Featured Videos
+        </a>
+        <a class="footer-link" href="http://www.dfinity.org/media#featured-stories">
+          Featured Stories
         </a>
         <a class="footer-link" href="http://www.dfinity.org/newsletter">
           Newsletter
-        </a>
-      </div>
-
-      <div class="col4">
-        <a class="footer-link" href="http://www.dfinity.org/terms-of-use">
-          Terms of Use
-        </a>
-        <a class="footer-link" href="http://www.dfinity.org/cookie-policy">
-          Cookie Policy
-        </a>
-        <a class="footer-link" href="http://www.dfinity.org/privacy-policy">
-          Privacy Policy
         </a>
       </div>
 
@@ -107,9 +98,22 @@
 
       </div>
     </nav>
-    <p class="footer-copyright">
-      © <span id="year">2020</span> DFINITY
-    </p>
+
+    <div class="legal-container">
+      <span class="legal" id="year">
+        © 2020 DFINITY
+      </span>
+      <a class="legal footer-link" href="http://www.dfinity.org/terms-of-use">
+        Terms of Use
+      </a>
+      <a class="legal footer-link" href="http://www.dfinity.org/cookie-policy">
+        Cookie Policy
+      </a>
+      <a class="legal footer-link" href="http://www.dfinity.org/privacy-policy">
+        Privacy Policy
+      </a>
+    </div>
+
   </div>
 </footer>
 
@@ -117,5 +121,5 @@
 <script>
   var today = new Date();
   var year = today.getFullYear();
-  document.getElementById("year").innerHTML = year;
+  document.getElementById("year").innerHTML = `© ${year} DFINITY`;
 </script>
