@@ -16,7 +16,14 @@ Vestibulum consectetur nec urna a luctus.
 Quisque pharetra tristique arcu fringilla dapibus.
 Curabitur ut massa aliquam, cursus enim et, accumsan lectus.
 
-== TEST
 
-Test paragraph.
+= Header 1
+
+== Header 2
+
+=== Header 3 (don't show up in sidebar)
+
+==== Header 4 (doesn't show up in sidebar)
+
+Paragraph.
 
