@@ -9,6 +9,7 @@
 
 @media screen and (min-width: 1024px) {
   .doc {
+    width: 75%;
     font-size: var(--doc-font-size--desktop);
     margin: var(--doc-margin--desktop);
     max-width: var(--doc-max-width--desktop);
