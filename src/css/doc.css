@@ -631,3 +631,119 @@
   font-weight: var(--body-font-weight-bold);
   line-height: calc(1 / 1.1);
 }
+
+
+/* Home page content tiles styling */
+
+.html-container {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.doc .home-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+}
+
+.doc .home-card {
+ background: #FFFFFF;
+ border-radius: 10px;
+ box-shadow:  inset 0 0 0px 1px var(--panel-border-color);
+ padding: 1em;
+ position: relative;
+ overflow: hidden;
+ color: var(--color-content-primary);
+ transition: transform 0.1s ease-out;
+ min-height: 220px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.doc .home-card-header {
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+  background: white;
+  width: fit-content;
+}
+
+.doc .home-card:hover,
+.doc .home-card:focus {
+  text-decoration: none;
+  color: var(--color-content-primary);
+  transform: translateY(-5px);
+}
+
+.doc .home-card svg,
+.doc .home-card img {
+ position: absolute;
+ top: -12px;
+ right: -10px;
+}
+
+.doc .featured-articles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+}
+
+
+.doc .featured-article-card {
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow:  inset 0 0 0px 1px var(--panel-border-color);
+  padding: 1em;
+  position: relative;
+  overflow: hidden;
+  color: var(--color-content-primary);
+  transition: transform 0.1s ease-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.doc .featured-article-card:hover,
+.doc .featured-article-card:focus {
+  text-decoration: none;
+  color: var(--color-content-primary);
+  transform: translateY(-5px);
+}
+
+.doc h3.featured-article-header {
+  margin-bottom: 1em;
+  padding-top: 1em;
+  border-top: 1px solid;
+  display: inline-block;
+  font-weight: 400;
+}
+
+.doc .featured-article-title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.doc .featured-article-title-wrapper p {
+  margin-left: 0.75em;
+}
+
+
+@media screen and (min-width: 768px) {
+  .doc .home-cards-grid,
+  .doc .featured-articles-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+}
+
+@media screen and (min-width: 1380px) {
+  .doc .home-cards-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

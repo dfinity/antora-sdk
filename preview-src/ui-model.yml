@@ -85,28 +85,32 @@ page:
     url: '#'
   navigation:
   - root: true
-    content: Project XYZ
-    url: '#'
-    urlType: fragment
     items:
-    - content: Quickstart
+    - content: Home
+      url: /home.html
+      urlType: internal
+    - content: Project XYZ
       url: '#'
       urlType: fragment
       items:
-      - content: Brand&#8217;s Hardware &amp; Software Requirements
-        url: /xyz/5.2/index.html
-        urlType: internal
-      - content: IDE Integration
+      - content: Quickstart
         url: '#'
         urlType: fragment
-    - content: Liber Recusabo
-      url: '#liber-recusabo'
-      urlType: fragment
-    - content: Reference
-      items:
-      - content: Keyboard Shortcuts
-        url: '#'
+        items:
+        - content: Brand&#8217;s Hardware &amp; Software Requirements
+          url: /xyz/5.2/index.html
+          urlType: internal
+        - content: IDE Integration
+          url: '#'
+          urlType: fragment
+      - content: Liber Recusabo
+        url: '#liber-recusabo'
         urlType: fragment
-      - content: Importing and Exporting
-        url: '#'
-        urlType: fragment
+      - content: Reference
+        items:
+        - content: Keyboard Shortcuts
+          url: '#'
+          urlType: fragment
+        - content: Importing and Exporting
+          url: '#'
+          urlType: fragment
