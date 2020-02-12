@@ -29,6 +29,11 @@
   margin-right: -0.25rem;
 }
 
+.edit-icon {
+  fill: var(--toolbar-muted-color);
+  width: 20px;
+}
+
 @media screen and (min-width: 1024px) {
 
   .toolbar {
@@ -61,7 +66,7 @@
 
 .edit-this-page {
   display: none;
-  padding-right: 0.5rem;
+  padding-right: 1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -72,4 +77,9 @@
 
 .toolbar .edit-this-page a {
   color: var(--toolbar-muted-color);
+}
+
+.edit-this-page a:hover svg,
+.edit-this-page a:focus svg {
+  fill: var(--color-content-primary);
 }
