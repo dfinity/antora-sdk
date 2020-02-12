@@ -39,7 +39,7 @@
 }
 
 .toc-menu a.is-active {
-  font-weight: var(--toc-weight-medium);
+  font-weight: var(--body-font-weight-bold);
   letter-spacing: -0.008em;
 }
 
