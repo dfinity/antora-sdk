@@ -1,5 +1,4 @@
 @font-face {
-  font-display: swap;
   font-family: 'Circular Std';
   font-style: normal;
   font-weight: 400;
@@ -9,7 +8,6 @@
 }
 
 @font-face {
-  font-display: swap;
   font-family: 'Circular Std';
   font-style: normal;
   font-weight: 600;
