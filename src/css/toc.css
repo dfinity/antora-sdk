@@ -16,7 +16,7 @@
 
 .toc .toc-menu ul {
   font-size: 0.875rem;
-  line-height: 1.3;
+  line-height: 2;
   list-style: none;
   padding: 0;
 }
@@ -45,15 +45,11 @@
 
 @media screen and (min-width: 1024px) {
   .toc {
-    display: block;
+    display: inline-table;
     min-width: 10rem;
     max-width: 15rem;
     padding: 1rem 0;
-  }
-
-  .toc-menu {
-    position: fixed;
-    max-height: 60%; /* allows room for footer and forces scrollbars */
-    overflow-y: auto;
+    position: sticky;
+    top: calc(var(--toolbar-height) + 6rem);
   }
 }

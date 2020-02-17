@@ -43,7 +43,7 @@
   }
 
   var title = document.createElement("h3");
-  title.textContent = "On This Page";
+  title.textContent = "On this page";
   menu.appendChild(title);
   menu.appendChild(list);
 

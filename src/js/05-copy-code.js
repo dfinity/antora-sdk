@@ -1,21 +1,16 @@
 (function() {
   "use strict";
 
-  // Find all <code> tags and add click handler to them
-  var codeTags = document.getElementsByTagName("code");
-  for (var i = 0; i < codeTags.length; i++) {
-    var codeTag = codeTags[i];
-    appendButton(codeTag);
-  }
 
-  // Find all <pre> tags that don't have <code> tags as a direct child
-  // and add click handlers to them
+  // Find all <pre> tags, check if they have a code tag as a direct child. 
+  // If so, add the copy code button to them. Checking first for pre tag
+  // ensures we don't add button to code blocks within paragraphs.
   var preTags = document.getElementsByTagName("pre");
   for (var i = 0; i < preTags.length; i++) {
     var preTag = preTags[i];
     var firstChild = preTag.firstChild;
-    if (firstChild && firstChild.tagName !== "CODE") {
-      appendButton(preTag);
+    if (firstChild && firstChild.tagName === "CODE") {
+      appendButton(firstChild);
     }
   }
 
