@@ -85,6 +85,10 @@
   font-weight: var(--monospace-font-weight-bold);
 }
 
+.hljs::before {
+  display: none !important;
+}
+
 /* prevent click event path in 05-copy-code.js from including children of the button */
 .copy-button * {
   pointer-events: none;
@@ -98,16 +102,22 @@
   outline: 0;
   border: 0;
   background: transparent;
-  opacity: 0.3;
   display: flex;
   align-items: center;
   transition: opacity 0.2s ease-out;
+  background: var(--pre-background);
 }
 
-.copy-button:hover,
-.copy-button:focus {
-  opacity: 0.8;
+.copy-button svg {
+  opacity: 0.3;
+  transition: opacity 0.1s ease-out;
 }
+
+.copy-button:hover svg,
+.copy-button:focus svg {
+  opacity: 1;
+}
+
 
 .copy-button:hover .copy-label,
 .copy-button:focus .copy-label {
@@ -121,7 +131,7 @@
   line-height: 1;
   margin-top: -3px;
   font-family: var(--monospace-font-family);
-  transform: translateX(100%);
+  transform: translateX(50%);
   opacity: 0;
   transition: transform 0.2s ease-out, opacity 0.1s ease-out;
 }

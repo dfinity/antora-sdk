@@ -10,7 +10,7 @@
     var preTag = preTags[i];
     var firstChild = preTag.firstChild;
     if (firstChild && firstChild.tagName === "CODE") {
-      appendButton(firstChild);
+      appendButton(preTag);
     }
   }
 
@@ -27,9 +27,9 @@
   // When the buttons within the code or pre tags are clicked,
   // get the content out of the tag and copy it to the users clicboard
   function handleClick(event) {
-    var button = event && event.target;
-    var parent = button.parentNode;
-    var text = parent.innerText; // get text from element
+    var button = event && event.target; // get copy button
+    var sibling = button.previousElementSibling; // get code block
+    var text = sibling.innerText; // get text from element
     var copyLabel = button.querySelector(".copy-label");
 
     var el = document.createElement("textarea"); // Create a <textarea> element
