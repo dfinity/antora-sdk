@@ -104,8 +104,13 @@
   background: transparent;
   display: flex;
   align-items: center;
-  transition: opacity 0.2s ease-out;
-  background: var(--pre-background);
+  transition: background 0.2s ease-out;
+  background: linear-gradient(270deg, var(--pre-background) 50%, rgba(245, 245, 245, 0) 100%);
+}
+
+.copy-button:hover,
+.copy-button:focus {
+  background: linear-gradient(270deg, var(--pre-background) 50%, rgba(245, 245, 245, 100%) 100%);
 }
 
 .copy-button svg {
