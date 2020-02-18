@@ -96,7 +96,7 @@
 
 .copy-button {
   position: absolute;
-  padding: 0.85em 1em calc(0.85em - 11px) 1em;
+  padding: 0 1em calc(0.85em - 11px) 1em;
   bottom: 12px;
   right: 0;
   outline: 0;
