@@ -46,3 +46,20 @@ Curabitur ut massa aliquam, cursus enim et, accumsan lectus.
 
 Paragraph.
 
+[source, swift]
+----
+actor Counter {
+  var value = 0;
+  public func inc() : async Nat {
+    value += 1;
+    return value;
+  };
+}
+----
+
+
+[source, swift]
+----
+a single long line of text to make sure the copy button is correctly aligned within the code block
+----
+

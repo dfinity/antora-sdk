@@ -96,8 +96,8 @@
 
 .copy-button {
   position: absolute;
-  padding: 0.85em 1em;
-  bottom: 0;
+  padding: 0.85em 1em calc(0.85em - 11px) 1em;
+  bottom: 12px;
   right: 0;
   outline: 0;
   border: 0;
@@ -106,6 +106,7 @@
   align-items: center;
   transition: background 0.2s ease-out;
   background: linear-gradient(270deg, var(--pre-background) 50%, rgba(245, 245, 245, 0) 100%);
+  border-radius: 0 0 4px 0;
 }
 
 .copy-button:hover,
