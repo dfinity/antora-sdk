@@ -230,7 +230,9 @@
 }
 
 .doc .admonitionblock {
-  margin: 1.4rem 0 0;
+  margin: 1.5rem 0 0;
+  border-left: 3px solid var(--note-color);
+  border-top: 3px solid var(--note-color);
 }
 
 .doc .admonitionblock p,
@@ -254,7 +256,7 @@
 }
 
 .doc .admonitionblock td.content {
-  padding: 1rem 1rem 0.75rem;
+  padding: 1rem 1rem 1rem;
   background: var(--admonition-background);
   width: 100%;
 }
@@ -263,41 +265,39 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 0.6375rem;
-  padding: 0 0.75rem;
+  font-size: 0.75rem;
+  padding: 0 0.65rem;
   height: 1.45rem;
   line-height: 100%;
   letter-spacing: 2px;
   font-weight: 600;
   text-transform: uppercase;
-  border-radius: 13px;
   -webkit-transform: translate(-0.5rem, -50%);
   transform: translate(-0.5rem, -50%);
 }
 
-
 .doc .admonitionblock.caution .icon {
-  background-color: var(--caution-color);
+  background-color: var(--color-white);
   color: var(--caution-on-color);
 }
 
 .doc .admonitionblock.important .icon {
-  background-color: var(--important-color);
+  background-color: var(--color-white);
   color: var(--important-on-color);
 }
 
 .doc .admonitionblock.note .icon {
-  background-color: var(--note-color);
+  background-color: var(--color-white);
   color: var(--note-on-color);
 }
 
 .doc .admonitionblock.tip .icon {
-  background-color: var(--tip-color);
+  background-color: var(--color-white);
   color: var(--tip-on-color);
 }
 
 .doc .admonitionblock.warning .icon {
-  background-color: var(--warning-color);
+  background-color: var(--color-white);
   color: var(--warning-on-color);
 }
 
@@ -683,7 +683,7 @@
 .doc .home-card:focus {
   text-decoration: none;
   color: var(--color-content-primary);
-  transform: translateY(-5px);
+  box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.3);
 }
 
 .doc .home-card svg,
@@ -699,7 +699,6 @@
   grid-column-gap: 1em;
   grid-row-gap: 1em;
 }
-
 
 .doc .featured-article-card {
   background: #FFFFFF;
