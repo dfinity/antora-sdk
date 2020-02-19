@@ -84,16 +84,16 @@
   --page-version-menu-background: var(--color-smoke-70);
   --page-version-missing-font-color: var(--color-gray-30);
   /* admonitions */
-  --caution-color: #522785;
-  --caution-on-color: var(--color-white);
-  --important-color: #d32f2f;
-  --important-on-color: var(--color-white);
-  --note-color: #29ABE2;
-  --note-on-color: var(--color-white);
-  --tip-color: #ED1E79;
-  --tip-on-color: var(--color-white);
-  --warning-color: #FBB03B;
-  --warning-on-color: var(--color-white);
+  --caution-color: var(--color-smoke-70);
+  --caution-on-color: #522785;
+  --important-color: var(--color-smoke-70);
+  --important-on-color: #FBB03B;
+  --note-color: var(--color-smoke-70);
+  --note-on-color: #29ABE2;
+  --tip-color: var(--color-smoke-70);
+  --tip-on-color:  #ED1E79;
+  --warning-color:  var(--color-smoke-70);
+  --warning-on-color: #d32f2f;
   /* doc */
   --doc-font-color: var(--color-jet-50);
   --doc-font-size: inherit;
