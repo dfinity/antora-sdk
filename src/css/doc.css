@@ -228,7 +228,7 @@
 }
 
 .doc .admonitionblock {
-  margin: 2.5rem 0 0;
+  margin: 3.5rem 0 0;
 }
 
 .doc .admonitionblock p,
@@ -269,8 +269,8 @@
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 13px;
-  -webkit-transform: translate(-0.5rem, -56%);
-  transform: translate(-0.5rem, -56%);
+  -webkit-transform: translate(-0.5rem, -105%);
+  transform: translate(-0.5rem, -105%);
 }
 
 .doc .admonitionblock.caution .icon {
