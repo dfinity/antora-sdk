@@ -1,4 +1,5 @@
 # UI for Dfinity Internet Computer Documentation
+
 This project uses [Antora](https://antora.org) to generate an interface for the Dfinity Internet Computer documentation site. The [dfinity-docs-playbook](https://github.com/dfinity-lab/dfinity-docs-playbook) pulls in the `ui-bundle.zip` file from this repo and the documentation from the [dfinity-lab/docs](https://github.com/dfinity-lab/docs) repo in order to generate the static documentation site. 
 
 ## Development
