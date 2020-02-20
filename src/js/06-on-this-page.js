@@ -31,6 +31,7 @@
       return target;
     }, document.createElement("a"));
     links[(link.href = "#" + heading.id)] = link;
+    link.addEventListener("click", handleClick);
     var listItem = document.createElement("li");
     listItem.appendChild(link);
     accum.appendChild(listItem);
@@ -61,6 +62,25 @@
   //     embeddedToc.appendChild(menu.cloneNode(true))
   //     doc.insertBefore(embeddedToc, startOfContent)
   //   }
+
+  function handleClick(event) {
+    event.preventDefault();
+    
+    var TOP_BAR_HEIGHT = 145;
+    var href = event.target.hash;
+    var id = href.slice(1, href.length);;
+    var element = document.getElementById(id);
+    var top = element.getBoundingClientRect().top;
+
+    if (typeof window !== 'undefined') {
+      window.scrollBy({
+        top: top - TOP_BAR_HEIGHT,
+        left: 0,
+        behavior: 'smooth'
+      })
+    }
+
+  }
 
   function onScroll() {
     // NOTE doc.parentNode.offsetTop ~= doc.parentNode.getBoundingClientRect().top + window.pageYOffset

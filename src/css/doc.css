@@ -53,9 +53,7 @@
 
 .doc h2:not(.discrete) {
   border-bottom: 1px solid var(--section-divider-color);
-  margin-left: -1rem;
-  margin-right: -1rem;
-  padding: 0.4rem 1rem 0.1rem;
+  padding: 0.6rem 0;
 }
 
 .doc h3:not(.discrete) {
@@ -230,7 +228,7 @@
 }
 
 .doc .admonitionblock {
-  margin: 1.4rem 0 0;
+  margin: 2.5rem 0 0;
 }
 
 .doc .admonitionblock p,
@@ -271,34 +269,39 @@
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 13px;
-  -webkit-transform: translate(-0.5rem, -50%);
-  transform: translate(-0.5rem, -50%);
+  -webkit-transform: translate(-0.5rem, -56%);
+  transform: translate(-0.5rem, -56%);
 }
 
 
 .doc .admonitionblock.caution .icon {
-  background-color: var(--caution-color);
-  color: var(--caution-on-color);
+  color: var(--caution-color);
+  background-color: var(--caution-on-color);
+  border: 2px solid var(--caution-color);
 }
 
 .doc .admonitionblock.important .icon {
-  background-color: var(--important-color);
-  color: var(--important-on-color);
+  color: var(--important-color);
+  background-color: var(--important-on-color);
+  border: 2px solid var(--important-color);
 }
 
 .doc .admonitionblock.note .icon {
-  background-color: var(--note-color);
-  color: var(--note-on-color);
+  color: var(--note-color);
+  background-color: var(--note-on-color);
+  border: 2px solid var(--note-color);
 }
 
 .doc .admonitionblock.tip .icon {
-  background-color: var(--tip-color);
-  color: var(--tip-on-color);
+  color: var(--tip-color);
+  background-color: var(--tip-on-color);
+  border: 2px solid var(--tip-color);
 }
 
 .doc .admonitionblock.warning .icon {
-  background-color: var(--warning-color);
-  color: var(--warning-on-color);
+  color: var(--warning-color);
+  background-color: var(--warning-on-color);
+  border: 2px solid var(--warning-color);
 }
 
 .doc .admonitionblock .icon i {
