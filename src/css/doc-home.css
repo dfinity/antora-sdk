@@ -45,7 +45,9 @@
   color: var(--color-content-primary);
 }
 
+.doc .home-card:hover svg,
 .doc .home-card:hover img,
+.doc .home-card:focus svg,
 .doc .home-card:focus img {
   transform: scale(1.1);
 }
