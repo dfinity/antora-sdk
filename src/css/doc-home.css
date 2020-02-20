@@ -43,7 +43,11 @@
 .doc .home-card:focus {
   text-decoration: none;
   color: var(--color-content-primary);
-  transform: translateY(-5px);
+}
+
+.doc .home-card:hover img,
+.doc .home-card:focus img {
+  transform: scale(1.1);
 }
 
 .doc .home-card svg,
@@ -51,6 +55,7 @@
   position: absolute;
   top: -12px;
   right: -10px;
+  transition: transform 0.2s ease-out;
 }
 
 .doc .featured-articles-grid {
