@@ -270,8 +270,8 @@
   letter-spacing: 2px;
   font-weight: 600;
   text-transform: uppercase;
-  -webkit-transform: translate(-0.5rem, -105%);
-  transform: translate(-0.5rem, -105%);
+  -webkit-transform: translate(-0.5rem, -50%);
+  transform: translate(-0.5rem, -50%);
 }
 
 .doc .admonitionblock.caution .icon {
@@ -309,7 +309,6 @@
   content: attr(title);
   hyphens: none;
   line-height: 2;
-  font-size: 12px;
 }
 
 .doc .imageblock {
