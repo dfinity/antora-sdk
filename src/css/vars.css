@@ -1,29 +1,26 @@
 :root {
-
   /* DFINITY VARIABLES */
   --navivation-height: 80px;
   --nav-width: 250px;
-  
-  --color-content-primary: rgba(51,51,51,1);
+
+  --color-content-primary: rgba(51, 51, 51, 1);
   --color-content-secondary: #91939b;
   --color-content-white: #fff;
-  --color-content-white--faded: rgba(255,255,255,0.6);
-  --color-content-highlight: #1A75FF;
+  --color-content-white--faded: rgba(255, 255, 255, 0.6);
+  --color-content-highlight: #1a75ff;
   --color-white: #fff;
-  --color-highlight: #1A75FF;
-  --color-blue-grey: #292A2E;
+  --color-highlight: #1a75ff;
+  --color-blue-grey: #292a2e;
 
-  
   --spacing-xs: 1em;
   --spacing-s: 1.5em;
   --spacing-m: 2em;
   --spacing-l: 3em;
   --spacing-xl: 4em;
-  
+
   --width-mobile: 30em;
   --width-tablet: 48em;
   --width-desktop: 1200px;
-
 
   /* colors */
   --color-white: #fff;
@@ -49,7 +46,7 @@
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
   --body-font-color: var(--color-jet-70);
-  --body-font-family: 'Circular Std', sans-serif;
+  --body-font-family: "Circular Std", sans-serif;
   --body-font-weight-bold: 600;
   --monospace-font-family: "Roboto Mono", monospace;
   --monospace-font-weight-bold: 600;
@@ -87,12 +84,12 @@
   --caution-color: var(--color-smoke-70);
   --caution-on-color: #522785;
   --important-color: var(--color-smoke-70);
-  --important-on-color: #FBB03B;
+  --important-on-color: #fbb03b;
   --note-color: var(--color-smoke-70);
-  --note-on-color: #29ABE2;
+  --note-on-color: #29abe2;
   --tip-color: var(--color-smoke-70);
-  --tip-on-color:  #ED1E79;
-  --warning-color:  var(--color-smoke-70);
+  --tip-on-color: #ed1e79;
+  --warning-color: var(--color-smoke-70);
   --warning-on-color: #d32f2f;
   /* doc */
   --doc-font-color: var(--color-jet-50);
@@ -144,14 +141,15 @@
   --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-height: calc(var(--nav-height) - var(--drawer-height));
-  --nav-panel-height--desktop: calc(var(--nav-height--desktop) - var(--drawer-height));
+  --nav-panel-height--desktop: calc(
+    var(--nav-height--desktop) - var(--drawer-height)
+  );
   --nav-width: calc(270 / var(--rem-base) * 1rem);
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
   --doc-max-width--desktop: calc(828 / var(--rem-base) * 1rem);
   /* stacking */
-  --z-index-nav: 1;
-  --z-index-toolbar: 2;
-  --z-index-page-version-menu: 3;
-  --z-index-navbar: 4;
-
+  --z-index-nav: 2;
+  --z-index-toolbar: 3;
+  --z-index-page-version-menu: 4;
+  --z-index-navbar: 5;
 }
