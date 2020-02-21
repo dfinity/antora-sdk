@@ -28,6 +28,7 @@ body {
 
 .header-title {
   font-size: 12px;
+  letter-spacing: 4px;
 }
 
 @media screen and (min-width: 500px) {
@@ -38,12 +39,12 @@ body {
 
   .header-title {
     font-size: 0.875em;
+    letter-spacing: 8px;
   }
 }
 
 .logo-container {
   text-transform: uppercase;
-  letter-spacing: 8px;
   font-weight: 600;
   display: flex;
   align-items: center;
