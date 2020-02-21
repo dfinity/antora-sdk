@@ -228,7 +228,9 @@
 }
 
 .doc .admonitionblock {
-  margin: 3.5rem 0 0;
+  margin: 1.5rem 0 0;
+  border-left: 3px solid var(--note-color);
+  border-top: 3px solid var(--note-color);
 }
 
 .doc .admonitionblock p,
@@ -261,14 +263,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 0.6375rem;
-  padding: 0 0.75rem;
+  font-size: 0.75rem;
+  padding: 0 0.65rem;
   height: 1.45rem;
   line-height: 100%;
   letter-spacing: 2px;
   font-weight: 600;
   text-transform: uppercase;
-  border-radius: 13px;
   -webkit-transform: translate(-0.5rem, -105%);
   transform: translate(-0.5rem, -105%);
 }
@@ -276,31 +277,26 @@
 .doc .admonitionblock.caution .icon {
   color: var(--caution-on-color);
   background-color: var(--color-white);
-  border: 2px solid var(--caution-on-color);
 }
 
 .doc .admonitionblock.important .icon {
   color: var(--important-on-color);
   background-color: var(--color-white);
-  border: 2px solid var(--important-on-color);
 }
 
 .doc .admonitionblock.note .icon {
   color: var(--note-on-color);
   background-color: var(--color-white);
-  border: 2px solid var(--note-on-color);
 }
 
 .doc .admonitionblock.tip .icon {
   color: var(--tip-on-color);
   background-color: var(--color-white);
-  border: 2px solid var(--tip-on-color);
 }
 
 .doc .admonitionblock.warning .icon {
   color: var(--warning-on-color);
   background-color: var(--color-white);
-  border: 2px solid var(--warning-on-color);
 }
 
 .doc .admonitionblock .icon i {
