@@ -4,15 +4,18 @@
   line-height: var(--doc-line-height);
   margin: var(--doc-margin);
   max-width: var(--doc-max-width);
-  padding: 0 1rem 4rem;
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-width: 0;
 }
 
 @media screen and (min-width: 1024px) {
   .doc {
-    width: 75%;
     font-size: var(--doc-font-size--desktop);
-    margin: var(--doc-margin--desktop);
     max-width: var(--doc-max-width--desktop);
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 
@@ -606,7 +609,8 @@
   background: var(--kbd-background);
   border: 1px solid var(--kbd-border-color);
   border-radius: 0.25em;
-  box-shadow: 0 1px 0 var(--kbd-border-color), 0 0 0 0.1em var(--body-background) inset;
+  box-shadow: 0 1px 0 var(--kbd-border-color),
+    0 0 0 0.1em var(--body-background) inset;
   padding: 0.25em 0.5em;
   vertical-align: text-bottom;
   white-space: nowrap;

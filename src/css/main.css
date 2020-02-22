@@ -1,10 +1,16 @@
+main {
+  min-width: 0;
+  width: 100%;
+  position: relative;
+}
+
 @media screen and (min-width: 1024px) {
   main {
-    flex: auto;
-    /* min-width: 0 required for flexbox to constrain overflowing elements */
-    min-width: 0;
+    width: calc(100% - var(--nav-width));
   }
   .main-content {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
 }
