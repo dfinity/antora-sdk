@@ -14,8 +14,8 @@
   .doc {
     font-size: var(--doc-font-size--desktop);
     max-width: var(--doc-max-width--desktop);
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 

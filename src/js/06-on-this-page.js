@@ -9,16 +9,9 @@
 
   var sidebar = document.querySelector("aside.toc.sidebar");
   if (!sidebar) return;
-  var doc;
-  var headings;
-  if (
-    document.querySelector(".body.-toc") ||
-    !(headings = find(
-      "h1[id].sect0, .sect1 > h2[id]",
-      (doc = document.querySelector("article.doc"))
-    )).length
-  ) {
-    sidebar.parentNode.removeChild(sidebar);
+  var doc = document.querySelector("article.doc");
+  var headings = find("h1[id].sect0, .sect1 > h2[id]", doc);
+  if (document.querySelector(".body.-toc") || headings.length === 0) {
     return;
   }
   var lastActiveFragment;
@@ -55,31 +48,22 @@
     });
   }
 
-  //   var startOfContent = doc.querySelector('h1.page ~ :not(.labels)')
-  //   if (startOfContent) {
-  //     var embeddedToc = document.createElement('aside')
-  //     embeddedToc.className = 'toc embedded'
-  //     embeddedToc.appendChild(menu.cloneNode(true))
-  //     doc.insertBefore(embeddedToc, startOfContent)
-  //   }
-
   function handleClick(event) {
     event.preventDefault();
-    
+
     var TOP_BAR_HEIGHT = 145;
     var href = event.target.hash;
-    var id = href.slice(1, href.length);;
+    var id = href.slice(1, href.length);
     var element = document.getElementById(id);
     var top = element.getBoundingClientRect().top;
 
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       window.scrollBy({
         top: top - TOP_BAR_HEIGHT,
         left: 0,
-        behavior: 'smooth'
-      })
+        behavior: "smooth"
+      });
     }
-
   }
 
   function onScroll() {
