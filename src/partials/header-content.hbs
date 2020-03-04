@@ -6,18 +6,21 @@
         <h1 class="header-title">{{site.title}}</h1>
       </a>
     </div>
-    <button class="navbar-burger" data-target="topbar-nav">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end">
-        <a class="navbar-item" target="blank" href="https://forum.dfinity.org/">Forum</a>
-        <a class="navbar-item" target="blank" href="mailto:support@dfinity.org">Support</a>
-        <a class="navbar-item" target="blank" href="https://www.twitter.com/dfinitydev">
-          <img src="{{uiRootPath}}/img/social/twitter-icon.svg">
-        </a>
+    <div class="nav-items-wrapper">
+      {{> search}}
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div id="topbar-nav" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" target="blank" href="https://forum.dfinity.org/">Forum</a>
+          <a class="navbar-item" target="blank" href="mailto:support@dfinity.org">Support</a>
+          <a class="navbar-item" target="blank" href="https://www.twitter.com/dfinitydev">
+            <img src="{{uiRootPath}}/img/social/twitter-icon.svg">
+          </a>
+        </div>
       </div>
     </div>
   </nav>
