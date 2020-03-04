@@ -134,7 +134,8 @@
 .doc p code,
 .doc thead code {
   color: var(--code-font-color);
-  background: var(--code-background);
+  background: var(--pre-background);
+  box-shadow: 0 0 0 1px var(--pre-border-color);
   border-radius: 0.25em;
   font-size: 0.95em;
   padding: 0.125em 0.25em;
