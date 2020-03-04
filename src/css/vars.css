@@ -65,6 +65,8 @@
   --navbar-menu-background: var(--color-white);
   --navbar-menu-font-color: var(--body-font-color);
   --navbar-menu_hover-background: var(--color-smoke-50);
+  --input-background-color: var(--color-smoke-50);
+  --input-border-color: var(--color-smoke-90);
   /* nav */
   --nav-background: var(--panel-background);
   --nav-border-color: var(--color-gray-10);
