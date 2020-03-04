@@ -225,7 +225,6 @@ body {
     right: 0;
     top: var(--navbar-height);
     width: 100%;
-    max-width: 204px;
   }
 
   .navbar-menu a.navbar-item:hover,
