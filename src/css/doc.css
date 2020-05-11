@@ -63,6 +63,16 @@
   font-weight: var(--alt-heading-font-weight);
 }
 
+.doc h4 {
+  font-weight: bold;
+}
+
+.doc h5 {
+  font-size: 1.1rem;
+  color: #522785;
+  font-weight: bold;
+}
+
 .doc h1 .anchor,
 .doc h2 .anchor,
 .doc h3 .anchor,
