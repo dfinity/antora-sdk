@@ -341,6 +341,11 @@
   max-width: 100%;
 }
 
+.doc .hack > .content {
+  float: left;
+  margin-left: 0;
+}
+
 #preamble .abstract blockquote {
   background: var(--abstract-background);
   border-left: 5px solid var(--abstract-border-color);
@@ -539,7 +544,7 @@
 
 .doc .listingblock code[data-lang]::before {
   content: attr(data-lang);
-  display: none;
+  display: node;
   color: var(--pre-annotation-font-color);
   font-size: calc(13.5 / var(--rem-base) * 1rem);
   letter-spacing: 0.05em;
@@ -648,4 +653,69 @@
   font-size: 1.1em;
   font-weight: var(--body-font-weight-bold);
   line-height: calc(1 / 1.1);
+}
+
+/* Add styles from tab-blocks */
+.doc .tabs ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 -0.25rem 0 0;
+  padding: 0;
+}
+
+.doc .tabs li {
+  align-items: center;
+  color: #522785;
+  font-size: 1.1rem;
+  /* border: 2px solid var(--color-border); */
+  border-bottom: 0;
+  cursor: pointer;
+  display: flex;
+  font-weight: var(--body-font-weight-bold);
+  height: 1.75rem;
+  line-height: 1;
+  margin-right: 0.25rem;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+.doc .tabs li + li {
+  margin-top: 0;
+}
+
+.doc .tabset.is-loading .tabs li:not(:first-child),
+.doc .tabset:not(.is-loading) .tabs li:not(.is-active) {
+  background-color: var(--color-text);
+  color: var(--color-brand-white);
+}
+
+.doc .tabset.is-loading .tabs li:first-child::after,
+.doc .tabs li.is-active::after {
+  background-color: var(--color-brand-white);
+  content: "";
+  display: block;
+  height: 3px; /* Chrome doesn't always paint the line accurately, so add a little extra */
+  position: absolute;
+  bottom: -1.5px;
+  left: 0;
+  right: 0;
+}
+
+.doc .tabset > .content {
+  border: 1px solid var(--color-border);
+  padding: 1.25rem;
+}
+
+.doc .tabset.is-loading .tab-pane:not(:first-child),
+.doc .tabset:not(.is-loading) .tab-pane:not(.is-active) {
+  display: none;
+}
+
+.doc .tab-pane > :first-child {
+  margin-top: 0;
+}
+
+.doc .tabs li.is-active::after {
+  border-top: 2px solid var(--color-border);
 }
