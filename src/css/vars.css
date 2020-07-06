@@ -116,7 +116,8 @@
   --caption-font-color: var(--color-gray-70);
   --caption-font-weight: var(--body-font-weight-bold);
   --code-background: var(--panel-background);
-  --code-font-color: var(--body-font-color);
+  /*--code-font-color: var(--body-font-color);*/
+  --code-font-color: red;
   --example-background: var(--color-white);
   --example-border-color: var(--color-gray-70);
   --kbd-background: var(--panel-background);
