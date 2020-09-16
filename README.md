@@ -1,9 +1,14 @@
-# UI for Dfinity Internet Computer Documentation
+# Customizing the UI for DFINITY Internet Computer Documentation
 
-This project uses [Antora](https://antora.org) to generate an interface for the Dfinity Internet Computer documentation site. The [dfinity-docs-playbook](https://github.com/dfinity-lab/dfinity-docs-playbook) pulls in the `ui-bundle.zip` file from this repo and the documentation from the [dfinity-lab/docs](https://github.com/dfinity-lab/docs) repo in order to generate the static documentation site. 
+This project uses [Antora](https://antora.org) to generate an interface for the DFINITY Internet Computer [SDK site](https://sdk.dfinity.org). The [dfinity-docs-playbook](https://github.com/dfinity-lab/dfinity-docs-playbook) pulls in the `ui-bundle.zip` file from this repo and the documentation from the the following repos to generate the static documentation site:
+
+- [dfinity/docs](https://github.com/dfinity/docs)
+- [dfinity/motoko-base](https://github.com/dfinity/motoko-base)
+- [dfinity/candid](https://github.com/dfinity/candid)
+- [dfinity-lab/motoko](https://github.com/dfinity-lab/motoko)
 
 ## Development
-Run `gulp preview` to run the project locally. Doing this uses samply documentation (not the actually docs defined in [dfinity-docs-playbook](https://github.com/dfinity-lab/dfinity-docs-playbook) ).
+Run `gulp preview` to run the project locally. Doing this uses the sample documentation (not the docs defined in [dfinity-docs-playbook](https://github.com/dfinity-lab/dfinity-docs-playbook) ).
 
 ## Building the UI
 Once you're happy with the changes, run `gulp-bundle` to generate a new `ui-bundle.zip` folder. The [dfinity-docs-playbook](https://github.com/dfinity-lab/dfinity-docs-playbook) repo references this zip file on the `master` branch.
