@@ -15,14 +15,15 @@
     .landing-hero {
       background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-        url(../img/logo8bit.png) center -30px no-repeat;
-      background-size: cover;
-      background-position: 0 0, -50 0;
+        url(../img/logo8bit.png) center 25% no-repeat;
+      background-color: black;
+      background-size: contain;
+      background-attachment: local, fixed;
       width: 100%;
     }
 
     .landing-hero h1 {
-      font-size: 3em;
+      font-size: 2em;
       text-align: center;
       max-width: 20em;
       padding: 2em 1em;
@@ -41,40 +42,51 @@
       margin: auto;
       max-width: 40em;
       font-size: 1.5em;
-      color: #0f0;
+      color: black;
       border: 1px solid white;
       border-radius: 0.5em;
       width: auto;
-      font-family: monospace;
       padding: 0.5em;
-      background: black;
+      background: whitesmoke;
+      overflow: hidden;
+    }
+
+    .landing-cta pre .copy-button {
+      bottom: 6px;
     }
 
     .landing-pitch {
-      margin: 2em;
       display: block;
       background: white;
       border-radius: 2em;
       padding: 2em;
-      min-height: calc(300px + 4em);
+      min-height: calc(200px + 4em);
     }
 
     .landing-pitch img {
-      float: left;
-      margin-right: 1em;
-    }
-
-    .landing-pitch:nth-of-type(even) img {
-      float: right;
-      margin-left: 1em;
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      max-width: 200px;
+      height: auto;
     }
 
     .landing-pitch h2 {
-      margin-top: 0;
+      clear: both;
+      margin-top: 2em;
     }
 
 .body.landing h1.intro {
   text-align: center;
+}
+
+.body.landing .home-pitches-grid {
+  margin: 0;
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 2em;
+  grid-column-gap: 2em;
 }
 
 .body.landing .home-cards-grid {
@@ -182,9 +194,28 @@
 }
 
 @media screen and (min-width: 768px) {
+  .landing-hero h1 {
+      font-size: 3em;
+  }
+
   .body.landing .home-cards-grid,
   .body.landing .featured-articles-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .landing-pitch img {
+    float: left;
+    margin: 0 2em 0 0;
+  }
+
+  .landing-pitch:nth-of-type(odd) img {
+    float: right;
+    margin: 0 0 0 2em;
+  }
+
+  .landing-pitch h2 {
+    margin-top: 0;
+    clear: none;
   }
 }
 
@@ -192,5 +223,8 @@
   .body.landing .home-cards-grid,
   .body.landing .featured-articles-grid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .body.landing .home-pitches-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
