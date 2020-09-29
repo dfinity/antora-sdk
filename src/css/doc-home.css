@@ -1,102 +1,102 @@
 /* Styles for cards on the home page */
 
-    .body.landing {
-      background: rgb(202, 204, 209);
-    }
+.body.landing {
+  background: linear-gradient(#caccd1, white) fixed;
+}
 
-    .body.landing main {
-      width: 100%;
-    }
+.body.landing main {
+  width: 100%;
+}
 
-    .body.landing .main-content {
-      display: block;
-    }
+.body.landing .main-content {
+  display: block;
+}
 
-    .landing-hero {
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-        url(../img/logo8bit.png) center 25% no-repeat;
-      background-color: black;
-      background-size: contain;
-      background-attachment: local, fixed;
-      width: 100%;
-    }
+.landing-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url(../img/logo8bit.png) center 25% no-repeat;
+  background-color: black;
+  background-size: contain;
+  background-attachment: local, fixed;
+  width: 100%;
+}
 
-    .landing-hero h1 {
-      font-size: 2em;
-      text-align: center;
-      max-width: 20em;
-      padding: 2em 1em;
-      margin: 0 auto;
-      color: white;
-    }
+.landing-hero h1 {
+  font-size: 2em;
+  text-align: center;
+  max-width: 20em;
+  padding: 2em 1em;
+  margin: 0 auto;
+  color: white;
+}
 
-    .landing-cta {
-      color: white;
-      font-size: 0.8em;
-      text-align: center;
-      padding: 1em;
-    }
+.landing-cta {
+  color: white;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 1em;
+}
 
-    .landing-cta pre {
-      margin: auto;
-      max-width: 40em;
-      font-size: 1.5em;
-      color: black;
-      border: 1px solid white;
-      border-radius: 0.5em;
-      width: auto;
-      padding: 0.5em;
-      background: whitesmoke;
-      overflow: hidden;
-    }
+.landing-cta pre {
+  margin: auto;
+  max-width: 40em;
+  font-size: 1.5em;
+  color: black;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  width: auto;
+  padding: 0.5em;
+  background: whitesmoke;
+  overflow: hidden;
+}
 
-    .landing-cta pre .copy-button {
-      bottom: 6px;
-    }
+.landing-cta pre .copy-button {
+  bottom: 6px;
+}
 
-    .landing-pitch {
-      display: block;
-      background: white;
-      border-radius: 2em;
-      padding: 2em;
-      min-height: calc(200px + 4em);
-    }
+.landing-pitch {
+  display: block;
+  background: white;
+  border-radius: 2em;
+  padding: 2em;
+  min-height: calc(200px + 4em);
+}
 
-    .landing-pitch img {
-      display: block;
-      margin: 0 auto;
-      width: 50%;
-      max-width: 200px;
-      height: auto;
-    }
+.landing-pitch img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
 
-    .landing-pitch h2 {
-      clear: both;
-      margin-top: 2em;
-    }
+.landing-pitch h2 {
+  clear: both;
+  margin-top: 2em;
+}
 
 .body.landing h1.intro {
   text-align: center;
 }
 
 .body.landing .home-pitches-grid {
-  margin: 0;
+  margin: 0 auto;
   padding: 2em;
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 2em;
   grid-column-gap: 2em;
+  max-width: 1440px;
 }
 
 .body.landing .home-cards-grid {
-  margin: 0;
+  margin: 0 auto;
   padding: 2em;
   display: grid;
-  background: linear-gradient(rgb(202, 204, 209),white);
   grid-template-columns: 1fr;
   grid-column-gap: 1em;
   grid-row-gap: 1em;
+  max-width: 1440px;
 }
 
 .body.landing .home-card {
@@ -195,7 +195,7 @@
 
 @media screen and (min-width: 768px) {
   .landing-hero h1 {
-      font-size: 3em;
+    font-size: 3em;
   }
 
   .body.landing .home-cards-grid,
@@ -204,6 +204,7 @@
   }
 
   .landing-pitch img {
+    width: 50%;
     float: left;
     margin: 0 2em 0 0;
   }
