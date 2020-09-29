@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{> head defaultPageTitle='Untitled'}}
+</head>
+
+<body class="article">
+  {{> header}}
+  <div class="body landing">
+    <main>
+      <div class="main-content">
+        {{{page.contents}}}
+      </div>
+    </main>
+  </div>
+  {{> footer}}
+</body>
+
+</html>

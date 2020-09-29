@@ -1,9 +1,11 @@
-(function() {
+(function () {
   "use strict";
+
 
   var navContainer = document.querySelector(".nav-container");
   var navToggle = document.querySelector(".nav-toggle");
 
+  if (navToggle && navContainer) {
   navToggle.addEventListener("click", showNav);
   // NOTE don't let click events propagate outside of nav container
   navContainer.addEventListener("click", concealEvent);
@@ -20,7 +22,7 @@
     menuPanel.scrollTop = 0;
   }
 
-  find(menuPanel, ".nav-item-toggle").forEach(function(btn) {
+  find(menuPanel, ".nav-item-toggle").forEach(function (btn) {
     var li = btn.parentElement;
     btn.addEventListener("click", toggleActive.bind(li));
     var navItemSpan = findNextElement(btn, ".nav-text");
@@ -30,7 +32,7 @@
     }
   });
 
-  nav.querySelector(".context").addEventListener("click", function() {
+  nav.querySelector(".context").addEventListener("click", function () {
     var currentPanel = nav.querySelector(".is-active[data-panel]");
     var activatePanel =
       currentPanel.dataset.panel === "menu" ? "explore" : "menu";
@@ -41,9 +43,10 @@
   });
 
   // NOTE prevent text from being selected by double click
-  menuPanel.addEventListener("mousedown", function(e) {
+  menuPanel.addEventListener("mousedown", function (e) {
     if (e.detail > 1) e.preventDefault();
   });
+}
 
   function activateCurrentPath(navItem) {
     var ancestorClasses;
@@ -113,4 +116,5 @@
       ? el[el.matches ? "matches" : "msMatchesSelector"](selector) && el
       : el;
   }
+
 })();
