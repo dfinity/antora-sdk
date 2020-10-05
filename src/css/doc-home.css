@@ -107,7 +107,7 @@
   overflow: hidden;
   color: var(--color-content-primary);
   transition: transform 0.1s ease-out;
-  min-height: 220px;
+  /*min-height: 220px;*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
