@@ -17,14 +17,6 @@
   font-display: swap;
   font-family: "Sharp Sans";
   font-style: normal;
-  font-weight: 600;
-  src: local("Sharp Sans Bold"), url(../font/SharpSansDispNo1-Bold.woff) format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Sharp Sans";
-  font-style: normal;
   font-weight: 700;
-  src: local("Sharp Sans"), url(../font/SharpSansDispNo1-Black.woff) format("woff");
+  src: local("Sharp Sans Bold"), url(../font/SharpSansDispNo1-Bold.woff) format("woff");
 }
