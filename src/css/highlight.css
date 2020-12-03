@@ -89,6 +89,17 @@
   display: none !important;
 }
 
+.run-button {
+    position: absolute;
+    z-index: 1;
+    right: 4px;
+    top: 4px;
+}
+
+[contenteditable]:focus {
+    outline: 1px solid black;
+}
+
 /* prevent click event path in 05-copy-code.js from including children of the button */
 .copy-button * {
   pointer-events: none;

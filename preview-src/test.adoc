@@ -4,6 +4,7 @@ Author Name
 :idseparator: -
 :!example-caption:
 :!table-caption:
+:page-repl: repl
 
 image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
 Platonem complectitur mediocritatem ea eos.
@@ -46,7 +47,7 @@ Curabitur ut massa aliquam, cursus enim et, accumsan lectus.
 
 Paragraph.
 
-[source, swift]
+[source, motoko]
 ----
 actor Counter {
   var value = 0;
@@ -57,6 +58,30 @@ actor Counter {
 }
 ----
 
+Show results as well.
+
+[source, motoko-run]
+----
+let x = 3;
+let y = x * x;
+----
+
+Run with base library.
+
+[source, motoko-run]
+....
+import Debug "mo:base/Debug";
+Debug.print "hello";
+....
+
+Show warnings.
+
+[source, motoko-run]
+----
+{ x = 10 } == { y = 20 }
+----
+
+Non-Motoko source
 
 [source, swift]
 ----
