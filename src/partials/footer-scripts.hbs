@@ -33,10 +33,11 @@ async function addPackage(name, repo, version, dir) {
   Promise.all(promises).then(() => {
     Motoko.addPackage(name, name + '/');
     console.log("base library loaded");
+    changeCodeBlock(); // from run_repl.js
   });
 }
 function loadBase() {
-  addPackage('base', 'dfinity/motoko-base', '{{page.attributes.moc-base-tag}}', 'src').then(changeCodeBlock());
+  addPackage('base', 'dfinity/motoko-base', '{{page.attributes.moc-base-tag}}', 'src');
 }
 </script>
 <script async src="{{uiRootPath}}/js/vendor/moc_interpreter.js" onload="loadBase()"></script>

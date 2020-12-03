@@ -92,8 +92,18 @@
 .run-button {
     position: absolute;
     z-index: 1;
-    right: 4px;
-    top: 4px;
+    right: 8px;
+    top: 8px;
+    background: transparent;
+    align-items: center;
+    opacity: 0.3;
+    transition: opacity 0.1s ease-out;
+}
+
+.run-button:hover,
+.run-button:focus {
+    opacity: 1;
+    outline: 1px solid black;
 }
 
 [contenteditable]:focus {

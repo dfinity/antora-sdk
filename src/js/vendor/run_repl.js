@@ -23,37 +23,36 @@ function changeCodeBlock() {
   }
 }
 
-  function appendRun(element, code, isRun) {
-    var button = document.createElement("button");
-    var output = document.createElement("div");
-    output.classList = "listingblock";
-    if (isRun) {
-      output.innerHTML = "<pre>Loading...</pre>";
-    }
-    button.innerHTML = "Run";
-    button.classList = "run-button";
-    element.appendChild(button);
-    element.appendChild(output);
-    button.addEventListener("click", function () {
-      var file = "stdin";
-      Motoko.saveFile(file, code.innerText);
-      var out = Motoko.run(file);
-      output.innerHTML = "";
-      if (out.stderr) {
-        var pre = document.createElement("pre");
-        pre.style = "color:red";
-        pre.innerText = out.stderr;
-        output.appendChild(pre);
-      }
-      if (out.stdout) {
-        var pre = document.createElement("pre");
-        pre.style = "color:green";
-        pre.innerText = out.stdout;
-        output.appendChild(pre);
-      }
-    });
-    if (isRun) {
-      button.click();
-    }
+function appendRun(element, code, isRun) {
+  var button = document.createElement("button");
+  var output = document.createElement("div");
+  output.classList = "listingblock";
+  if (isRun) {
+    output.innerHTML = "<pre>Loading...</pre>";
   }
-
+  button.innerHTML = "▶";
+  button.classList = "run-button";
+  element.appendChild(button);
+  element.appendChild(output);
+  button.addEventListener("click", function () {
+    var file = "stdin";
+    Motoko.saveFile(file, code.innerText);
+    var out = Motoko.run(file);
+    output.innerHTML = "";
+    if (out.stderr) {
+      var pre = document.createElement("pre");
+      pre.style = "color:red";
+      pre.innerText = out.stderr;
+      output.appendChild(pre);
+    }
+    if (out.stdout) {
+      var pre = document.createElement("pre");
+      pre.style = "color:green";
+      pre.innerText = out.stdout;
+      output.appendChild(pre);
+    }
+  });
+  if (isRun) {
+    button.click();
+  }
+}
