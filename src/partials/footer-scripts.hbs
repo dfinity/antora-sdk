@@ -36,7 +36,7 @@ async function addPackage(name, repo, version, dir) {
   });
 }
 function loadBase() {
-  addPackage('base', 'dfinity/motoko-base', 'dfx-0.6.12', 'src').then(changeCodeBlock());
+  addPackage('base', 'dfinity/motoko-base', '{{page.attributes.moc-base-tag}}', 'src').then(changeCodeBlock());
 }
 </script>
 <script async src="{{uiRootPath}}/js/vendor/moc_interpreter.js" onload="loadBase()"></script>
