@@ -94,6 +94,8 @@
     z-index: 1;
     right: 8px;
     top: 8px;
+    outline: 0;
+    border: 0;
     background: transparent;
     align-items: center;
     opacity: 0.3;

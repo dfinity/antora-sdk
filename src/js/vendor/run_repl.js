@@ -17,24 +17,35 @@ function changeCodeBlock() {
       }
       if (firstChild.classList.contains("language-motoko")) {
         firstChild.setAttribute("contenteditable", "true");
-        appendRun(preTag, firstChild, isRun);
+        preTag.classList.add("motoko");
+        highlightCode(preTag);
+        appendRun(preTag, isRun);
       }
     }
   }
 }
 
-function appendRun(element, code, isRun) {
+function highlightCode(pre) {
+  var code_text = pre.firstChild.innerText;
+  pre.firstChild.innerHTML = code_text;
+  window.hljs.highlightBlock(pre);
+}
+
+function appendRun(element, isRun) {
+  var parent = element.parentNode;
+  parent.style = "position:relative";
   var button = document.createElement("button");
   var output = document.createElement("div");
   output.classList = "listingblock";
   if (isRun) {
     output.innerHTML = "<pre>Loading...</pre>";
   }
-  button.innerHTML = "▶";
+  button.innerHTML = "▶ Run";
   button.classList = "run-button";
-  element.appendChild(button);
-  element.appendChild(output);
+  parent.appendChild(button);
+  parent.appendChild(output);
   button.addEventListener("click", function () {
+    var code = element.firstChild;
     var file = "stdin";
     Motoko.saveFile(file, code.innerText);
     var out = Motoko.run(file);
@@ -51,6 +62,7 @@ function appendRun(element, code, isRun) {
       pre.innerText = out.stdout;
       output.appendChild(pre);
     }
+    highlightCode(element);
   });
   if (isRun) {
     button.click();
