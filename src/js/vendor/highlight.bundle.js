@@ -27,7 +27,6 @@
     "markdown",
     require("highlight.js/lib/languages/markdown")
   );
-  hljs.registerLanguage("nix", require("highlight.js/lib/languages/nix"));
   hljs.registerLanguage("rust", require("highlight.js/lib/languages/rust"));  
   hljs.registerLanguage("shell", require("highlight.js/lib/languages/shell"));
   hljs.registerLanguage("yaml", require("highlight.js/lib/languages/yaml"));
@@ -37,7 +36,7 @@
       aliases: ['mo'],
       keywords: {
         $pattern: '[a-zA-Z_]\\w*',
-        keyword: 'actor and async assert await break case catch class' +
+        keyword: 'actor and async await break case catch class' +
           ' continue debug else for func if in import' +
           ' module not object or label let loop private' +
           ' public return shared try throw query switch' +
@@ -46,9 +45,9 @@
         built_in: 'Any None Null Bool Int Int8 Int16 Int32 Int64' +
           ' Nat Nat8 Nat16 Nat32 Nat64 Word8 Word16 Word32 Word64' +
           ' Float Char Text Blob Error Principal' +
-          ' debug_show',
+          ' debug_show assert',
       },
-      illegal: /\/\/|>>/,
+      illegal: '</',
       contains: [
         hljs.C_LINE_COMMENT_MODE,
         hljs.COMMENT('/\\*', '\\*/', {
@@ -73,7 +72,7 @@
           className: 'number',
           variants: [
             {
-              begin: '[+-]?\\b0x([A-Fa-f0-9_]+)'
+              begin: '[+-]?\\b0[xX]([A-Fa-f0-9_]+)'
             },
             {
               begin: '[+-]?\\b(\\d[\\d_]*(\\.[0-9_]+)?([eE][+-]?[0-9_]+)?)'
@@ -82,9 +81,24 @@
           relevance: 0
         },
         {
-          className: 'symbol',
-          begin: /'[a-zA-Z_][a-zA-Z0-9_]*/
-        },   
+          className: 'function',
+          beginKeywords: 'func',
+          end: '(\\(|<)',
+          excludeEnd: true,
+          contains: [ hljs.UNDERSCORE_TITLE_MODE ]
+        },
+        {
+          className: 'class',
+          begin: '\\b(actor(\ class)?|module|object)\\b',
+          keywords: 'actor class module object',
+          end: /\{/,
+          contains: [
+            hljs.inherit(hljs.UNDERSCORE_TITLE_MODE, {
+              endsParent: true
+            })
+          ],
+          illegal: '[\\w\\d]'
+        },
       ],
     };
   });
