@@ -16,9 +16,11 @@ function changeCodeBlock() {
         firstChild.setAttribute("data-lang", "motoko");
       }
       if (firstChild.classList.contains("language-motoko")) {
-        firstChild.setAttribute("contenteditable", "true");
+        //firstChild.setAttribute("contenteditable", "true");
         preTag.classList.add("motoko");
-        highlightCode(preTag);
+        var jar = window.CodeJar(preTag, window.hljs.highlightBlock);
+        preTag.style = "";
+        //highlightCode(preTag);
         appendRun(preTag, isRun);
       }
     }
@@ -27,6 +29,7 @@ function changeCodeBlock() {
 
 function highlightCode(pre) {
   var code_text = pre.firstChild.innerText;
+  // highlight.js is not very good at incremental changes. We need to reset the previous tags.
   pre.firstChild.innerHTML = code_text;
   window.hljs.highlightBlock(pre);
 }

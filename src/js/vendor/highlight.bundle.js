@@ -91,12 +91,12 @@
           className: 'class',
           begin: '\\b(actor(\ class)?|module|object)\\b',
           keywords: 'actor class module object',
-          end: /\{/,
-          contains: [
-            hljs.inherit(hljs.UNDERSCORE_TITLE_MODE, {
-              endsParent: true
-            })
-          ],
+          end: '(\\(|<|\{)',
+          contains: [ hljs.UNDERSCORE_TITLE_MODE ],
+//            hljs.inherit(hljs.UNDERSCORE_TITLE_MODE, {
+//              endsParent: true
+//            })
+//          ],
           illegal: '[\\w\\d]'
         },
       ],

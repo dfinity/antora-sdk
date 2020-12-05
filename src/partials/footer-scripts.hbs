@@ -11,6 +11,10 @@
 
 {{#if page.attributes.repl}}
 <script async src="{{uiRootPath}}/js/vendor/run_repl.js"></script>
+<script type="module">
+  import {CodeJar} from 'https://medv.io/codejar/codejar.js';
+  window.CodeJar = CodeJar;
+</script> 
 <script type="text/javascript">
 async function addPackage(name, repo, version, dir) {
   const meta_url = `https://data.jsdelivr.com/v1/package/gh/${repo}@${version}/flat`;
