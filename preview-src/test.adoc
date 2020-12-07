@@ -48,39 +48,59 @@ Curabitur ut massa aliquam, cursus enim et, accumsan lectus.
 
 Paragraph.
 
-[source, motoko]
+[source#counter, motoko]
 ----
 actor Counter {
-  var value = 0;
+  var value = 0;  // <1>
   public func inc() : async Nat {
-    value += 1;
+    value += 1;   // <2>
     return value;
   };
 }
 ----
+<1> counter value
+<2> increment counter
 
 Show results as well.
 
-[source, motoko]
+[source#x, motoko]
 ----
 let x = 3;
+----
+
+[source#y.include_x, motoko]
+----
 let y = x * x;
+----
+
+[source.run.include_x_y, motoko]
+----
+let z = y * y;
 ----
 
 Run with base library.
 
-[source, motoko-run]
+[source.run.include_counter, motoko]
 ....
 // comments
 import Debug "mo:base/Debug";
 Debug.print /* hello */ "hello";
+await Counter.inc();
 ....
 
 Show warnings.
 
-[source, motoko-run]
+[source.run, motoko]
 ----
 { x = 10 } == { y = 20 }
+----
+
+Without repl
+[source.no-repl, motoko]
+----
+actor {
+  ...
+}
 ----
 
 Candid

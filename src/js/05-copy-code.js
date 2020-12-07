@@ -10,7 +10,7 @@
     var preTag = preTags[i];
     var firstChild = preTag.firstChild;
     if (firstChild && firstChild.tagName === "CODE") {
-      if (firstChild.classList.contains("language-motoko") || firstChild.classList.contains("language-motoko-run")) {
+      if (firstChild.classList.contains("language-motoko")) {
         continue;
       }
       appendButton(preTag);

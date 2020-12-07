@@ -33,16 +33,16 @@
         aliases: ['mo'],
         keywords: {
           $pattern: '[a-zA-Z_]\\w*',
-          keyword: 'actor and async await break case catch class' +
+          keyword: 'actor and await break case catch class' +
             ' continue debug else for func if in import' +
             ' module not object or label let loop private' +
             ' public return shared try throw query switch' +
-            ' type var while stable flexible system',
+            ' type var while stable flexible system debug_show assert ignore',
           literal: 'true false null',
           built_in: 'Any None Null Bool Int Int8 Int16 Int32 Int64' +
             ' Nat Nat8 Nat16 Nat32 Nat64 Word8 Word16 Word32 Word64' +
             ' Float Char Text Blob Error Principal' +
-            ' debug_show assert',
+            ' async',
         },
         illegal: '</',
         contains: [
