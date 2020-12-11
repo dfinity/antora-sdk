@@ -89,11 +89,6 @@
   display: none !important;
 }
 
-div.listingblock:not(.no-repl) div.content pre.highlight code.language-motoko {
-  max-height: 500px;
-  overflow-y: auto;
-}
-
 div.listingblock:not(.no-repl) div.content pre.highlight code.language-motoko:hover,
 div.listingblock:not(.no-repl) div.content pre.highlight code.language-motoko:focus {
     outline: 1px solid black;

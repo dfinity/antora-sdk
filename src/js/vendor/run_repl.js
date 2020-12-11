@@ -27,6 +27,7 @@ function extractConfig(pre) {
     name += ".mo";
   }
   var include = [];
+  var hook = null;
   for (var i = 0; i < div.classList.length; i++) {
     var config = div.classList[i];
     if (config.startsWith("include")) {
@@ -34,11 +35,15 @@ function extractConfig(pre) {
       for (var j = 1; j < split.length; j++) {
         include.push(split[j]);
       }
+    } else if (config.startsWith("hook")) {
+      var split = config.split("_");
+      hook = split[1];
     }
   }
   return {
     name: name,
     include: include,
+    hook: hook,
     isRun: div.classList.contains("run"),
     noRepl: div.classList.contains("no-repl"),
   };
@@ -53,12 +58,16 @@ function highlightCode(pre) {
 }
 
 function saveIncluded(include) {
+  var codes = {};
   for (var i = 0; i < include.length; i++) {
     var node = document.getElementById(include[i]);
     var codeTag = node.querySelector("div.content").querySelector("pre").querySelector("code");
     var code = codeTag.innerText;
-    Motoko.saveFile(include[i] + ".mo", code);
+    var name = include[i] + ".mo";
+    Motoko.saveFile(name, code);
+    codes[name] = code;
   }
+  return codes;
 }
 
 function appendRun(element, config) {
@@ -69,7 +78,7 @@ function appendRun(element, config) {
     return;
   }
   var jar = window.CodeJar(element, window.hljs.highlightBlock);
-  element.style = ""; //"max-height:450px;overflow-y:auto;overflow-wrap:break-word";
+  element.style = "";
   
   var parent = element.parentNode;
   parent.style = "position:relative";
@@ -84,11 +93,21 @@ function appendRun(element, config) {
   parent.appendChild(button);
   parent.appendChild(output);
   button.addEventListener("click", function () {
-    saveIncluded(config.include);
+    var codes = saveIncluded(config.include);
     var code = element.firstChild.innerText;
     var file = config.name || "stdin";
     Motoko.saveFile(file, code);
-    var out = Motoko.run(config.include.map(function (s) { return s+".mo"}), file);
+    var out;
+    if (config.hook) {
+      var fn = window[config.hook];
+      if (typeof fn !== "function") {
+        throw new Error(config.hook + " is not a function");
+      }
+      out = fn.apply(null, [codes, code]);
+    } else {
+      var list = config.include.map(function (s) { return s+".mo"});      
+      out = Motoko.run(list, file);
+    }
     output.innerHTML = "";
     if (out.stderr) {
       var pre = document.createElement("pre");

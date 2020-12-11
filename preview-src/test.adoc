@@ -5,6 +5,7 @@ Author Name
 :!example-caption:
 :!table-caption:
 :page-repl: true
+:page-moc-version: 0.5.3
 :page-moc-base-tag: dfx-0.6.12
 
 image:multirepo-ssg.svg[Multirepo SSG,200,float=right]

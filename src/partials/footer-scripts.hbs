@@ -44,5 +44,5 @@ function loadBase() {
   addPackage('base', 'dfinity/motoko-base', '{{page.attributes.moc-base-tag}}', 'src');
 }
 </script>
-<script async src="{{uiRootPath}}/js/vendor/moc_interpreter.js" onload="loadBase()"></script>
+<script async src="https://download.dfinity.systems/motoko/{{page.attributes.moc-version}}/js/moc-interpreter-{{page.attributes.moc-version}}.js" onload="loadBase()"></script>
 {{/if}}
