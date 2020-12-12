@@ -104,6 +104,7 @@
   }
   
   hljs.registerLanguage("bash", require("highlight.js/lib/languages/bash"));
+  hljs.registerLanguage("bnf", require("highlight.js/lib/languages/bnf"));  
   hljs.registerLanguage("css", require("highlight.js/lib/languages/css"));
   hljs.registerLanguage("diff", require("highlight.js/lib/languages/diff"));
   hljs.registerLanguage("http", require("highlight.js/lib/languages/http"));
