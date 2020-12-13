@@ -9,7 +9,6 @@
 .hljs-selector-tag,
 .hljs-subst {
   color: #07a;
-  //font-weight: var(--monospace-font-weight-bold);
 }
 
 .hljs-number,
@@ -29,7 +28,6 @@
 .hljs-section,
 .hljs-selector-id {
   color: #900;
-  //font-weight: var(--monospace-font-weight-bold);
 }
 
 .hljs-subst {
@@ -39,7 +37,6 @@
 .hljs-type,
 .hljs-class .hljs-title {
   color: #900;
-  //font-weight: var(--monospace-font-weight-bold);
 }
 
 .hljs-tag,
@@ -66,7 +63,6 @@
 
 .hljs-meta {
   color: #999;
-  //font-weight: var(--monospace-font-weight-bold);
 }
 
 .hljs-deletion {
@@ -98,11 +94,12 @@ div.listingblock:not(.no-repl) div.content pre.highlight code.language-motoko:fo
 .run-button {
     position: absolute;
     z-index: 1;
-    right: 8px;
-    top: 16px;
+    right: 3px;
+    top: 8px;
     outline: 0;
     border: 0;
     background: transparent;
+    display: flex;
     align-items: center;
     opacity: 0.3;
     transition: opacity 0.1s ease-out;
@@ -111,7 +108,23 @@ div.listingblock:not(.no-repl) div.content pre.highlight code.language-motoko:fo
 .run-button:hover,
 .run-button:focus {
     opacity: 1;
-    outline: 1px solid black;
+    /* outline: 1px solid black; */
+}
+
+.run-button:hover .run-label {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+.run-label {
+  margin-right: 0.5em;
+  line-height: 1;
+  margin-top: -3px;
+  font-family: var(--monospace-font-family);
+  transform: translateX(50%);
+  opacity: 0;
+  transition: transform 0.2s ease-out, opacity 0.1s ease-out;
 }
 
 /* prevent click event path in 05-copy-code.js from including children of the button */
