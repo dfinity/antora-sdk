@@ -8,8 +8,7 @@
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-subst {
-  color: #333;
-  font-weight: var(--monospace-font-weight-bold);
+  color: #07a;
 }
 
 .hljs-number,
@@ -17,19 +16,18 @@
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag .hljs-attr {
-  color: #008080;
+  color: #690;
 }
 
 .hljs-string,
 .hljs-doctag {
-  color: #d14;
+  color: #690;
 }
 
 .hljs-title,
 .hljs-section,
 .hljs-selector-id {
   color: #900;
-  font-weight: var(--monospace-font-weight-bold);
 }
 
 .hljs-subst {
@@ -38,8 +36,7 @@
 
 .hljs-type,
 .hljs-class .hljs-title {
-  color: #458;
-  font-weight: var(--monospace-font-weight-bold);
+  color: #900;
 }
 
 .hljs-tag,
@@ -61,12 +58,11 @@
 
 .hljs-built_in,
 .hljs-builtin-name {
-  color: #0086b3;
+  color: #6f42c1;
 }
 
 .hljs-meta {
   color: #999;
-  font-weight: var(--monospace-font-weight-bold);
 }
 
 .hljs-deletion {
@@ -87,6 +83,48 @@
 
 .hljs::before {
   display: none !important;
+}
+
+div.listingblock:not(.no-repl) div.content pre.highlight code.language-motoko:hover,
+div.listingblock:not(.no-repl) div.content pre.highlight code.language-motoko:focus {
+    outline: 1px solid black;
+    border-radius: 4px;
+}
+
+.run-button {
+    position: absolute;
+    z-index: 1;
+    right: 3px;
+    top: 8px;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    opacity: 0.3;
+    transition: opacity 0.1s ease-out;
+}
+
+.run-button:hover,
+.run-button:focus {
+    opacity: 1;
+    /* outline: 1px solid black; */
+}
+
+.run-button:hover .run-label {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+.run-label {
+  margin-right: 0.5em;
+  line-height: 1;
+  margin-top: -3px;
+  font-family: var(--monospace-font-family);
+  transform: translateX(50%);
+  opacity: 0;
+  transition: transform 0.2s ease-out, opacity 0.1s ease-out;
 }
 
 /* prevent click event path in 05-copy-code.js from including children of the button */
