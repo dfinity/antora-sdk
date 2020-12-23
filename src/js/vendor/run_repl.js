@@ -88,8 +88,6 @@ function appendRun(element, config) {
   var jar = window.CodeJar(element, option, {tab: "  "});
   if (config.lineNumber) {
     element.style = "padding-left: calc(35px)";
-    var line = element.previousSibling;
-    line.style = "";
   } else {
     element.style = "";
   }
