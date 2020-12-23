@@ -40,19 +40,20 @@ function extractConfig(pre) {
       hook = split[1];
     }
   }
+  var lineNumber = pre.firstChild.innerText.split("\n").length > 3;
   return {
     name: name,
     include: include,
     hook: hook,
+    lineNumber: lineNumber,
     isRun: div.classList.contains("run"),
     noRepl: div.classList.contains("no-repl"),
   };
 }
 
 function highlightCode(pre) {
-  var code_text = pre.firstChild.innerText;
   // highlight.js is not very good at incremental changes. We need to reset the previous tags.
-  pre.firstChild.innerHTML = "";
+  var code_text = pre.firstChild.innerText;
   pre.firstChild.textContent = code_text;
   window.hljs.highlightBlock(pre);
 }
@@ -77,10 +78,22 @@ function appendRun(element, config) {
   if (config.noRepl) {
     return;
   }
-  var jar = window.CodeJar(element, window.hljs.highlightBlock);
-  element.style = "";
-  
   var parent = element.parentNode;
+  var option;
+  if (config.lineNumber) {
+    option = window.withLineNumbers(highlightCode);
+  } else {
+    option = highlightCode;
+  }
+  var jar = window.CodeJar(element, option, {tab: "  "});
+  if (config.lineNumber) {
+    element.style = "padding-left: calc(35px)";
+    var line = element.previousSibling;
+    line.style = "";
+  } else {
+    element.style = "";
+  }
+  
   parent.style = "position:relative";
   var button = document.createElement("button");
   var output = document.createElement("div");

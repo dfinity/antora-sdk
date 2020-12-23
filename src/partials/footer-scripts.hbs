@@ -13,7 +13,9 @@
 <script src="{{uiRootPath}}/js/vendor/run_repl.js"></script>
 <script type="module">
   import {CodeJar} from 'https://cdn.jsdelivr.net/npm/codejar@3.2.3/codejar.min.js';
+  import {withLineNumbers} from 'https://cdn.jsdelivr.net/npm/codejar@3.2.3/linenumbers.js';
   window.CodeJar = CodeJar;
+  window.withLineNumbers = withLineNumbers;
 </script> 
 <script type="text/javascript">
 async function addPackage(name, repo, version, dir) {
