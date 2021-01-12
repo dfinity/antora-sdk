@@ -85,10 +85,18 @@
   display: none !important;
 }
 
-div.listingblock:not(.no-repl) div.content pre.highlight code.language-motoko:hover,
-div.listingblock:not(.no-repl) div.content pre.highlight code.language-motoko:focus {
-    outline: 1px solid black;
-    border-radius: 4px;
+[contenteditable="plaintext-only"]:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 1px #e1e1e1;
+}
+
+.codejar-linenumbers {
+    box-shadow: 0px 0px 0px 1px #e1e1e1;
+    padding-top: .75rem !important;
+    mix-blend-mode: normal !important;
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+    text-align: center;
 }
 
 .run-button {

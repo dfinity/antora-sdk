@@ -34,7 +34,7 @@
         keywords: {
           $pattern: '[a-zA-Z_]\\w*',
           keyword: 'actor and await break case catch class' +
-            ' continue debug else for func if in import' +
+            ' continue debug do else for func if in import' +
             ' module not object or label let loop private' +
             ' public return shared try throw query switch' +
             ' type var while stable flexible system debug_show assert ignore',
@@ -57,9 +57,13 @@
           string,
           number,
           {
+            className: 'symbol',
+            begin: '#' + hljs.UNDERSCORE_IDENT_RE
+          },
+          {
             className: 'function',
             beginKeywords: 'func',
-            end: '(\\(|<)',
+            end: '(\\(|<|=|{)',
             excludeEnd: true,
             contains: [ hljs.UNDERSCORE_TITLE_MODE ]
           },
@@ -70,6 +74,19 @@
             end: '(\\(|<|\{)',
             contains: [ hljs.UNDERSCORE_TITLE_MODE ],
             illegal: '[\\w\\d]'
+          },
+          {
+            className: 'built_in',
+            beginKeywords: 'import type',
+            end: '(;|$|=)',
+            excludeEnd: true,
+            contains: [
+              hljs.QUOTE_STRING_MODE,
+              hljs.C_LINE_COMMENT_MODE,
+              hljs.COMMENT('/\\*', '\\*/', {
+                contains: [ 'self' ]
+              }),  
+            ]
           },
         ],
       };
