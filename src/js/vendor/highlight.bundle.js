@@ -63,7 +63,7 @@
           {
             className: 'function',
             beginKeywords: 'func',
-            end: '(\\(|<)',
+            end: '(\\(|<|=|{)',
             excludeEnd: true,
             contains: [ hljs.UNDERSCORE_TITLE_MODE ]
           },
