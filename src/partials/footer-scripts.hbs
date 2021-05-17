@@ -42,7 +42,7 @@ async function addPackage(name, repo, version, dir) {
   }
   Promise.all(promises).then(() => {
     Motoko.addPackage(name, name + '/');
-    console.log("base library loaded");
+    console.log(`Loaded motoko library "${name}"`);
     changeCodeBlock(); // from run_repl.js
   });
 }
