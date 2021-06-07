@@ -16,9 +16,9 @@ const postcssCalc = require("postcss-calc");
 const postcssImport = require("postcss-import");
 const postcssUrl = require("postcss-url");
 const postcssVar = require("postcss-custom-properties");
-const uglifyes = require('uglify-es');
-const composer = require('gulp-uglify/composer');
-const uglify = composer(uglifyes, console);
+// const uglifyes = require('uglify-es');
+const uglify = require('gulp-uglify');
+// const uglify = composer(uglifyes, console);
 const vfs = require("vinyl-fs");
 
 module.exports = (src, dest, preview) => () => {
