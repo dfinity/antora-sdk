@@ -57,7 +57,6 @@
     "stylelint-config-standard": "~19.0",
     "through2": "~3.0",
     "typeface-roboto": "0.0.75",
-    "typeface-roboto-mono": "0.0.75",
     "uglify-es": "^3.3.9",
     "vinyl-buffer": "~1.0",
     "vinyl-fs": "~3.0",

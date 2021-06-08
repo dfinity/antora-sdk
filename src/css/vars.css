@@ -49,7 +49,7 @@
   --body-font-color: var(--color-jet-70);
   --body-font-family: "CircularXX", sans-serif;
   --body-font-weight-bold: 500;
-  --monospace-font-family: "Roboto Mono", monospace;
+  --monospace-font-family: "Fira Code", monospace;
   --monospace-font-weight-bold: 600;
   /* base */
   --body-background: var(--color-white);
