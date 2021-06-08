@@ -1,7 +1,7 @@
 (function() {
   "use strict";
 
-  var hljs = require("highlight.js/lib/highlight");
+  var hljs = require("highlight.js");
 
   function registerMotoko() {
     var string = {
