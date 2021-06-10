@@ -3,13 +3,19 @@
   --navivation-height: 80px;
   --nav-width: 250px;
 
+  /* Colors from https://www.figma.com/file/768l7kxM3F3YLvHoTBnAhz/SDK-2021?node-id=415%3A768 */
+  --color-light-text-title: #000000;
+  --color-light-text-body: #181719;
+  --color-light-text-secondary: #616161;
+  --color-light-text-highlight: #3C84F1;
+
   --color-content-primary: rgba(51, 51, 51, 1);
   --color-content-secondary: #91939b;
   --color-content-white: #fff;
   --color-content-white--faded: rgba(255, 255, 255, 0.6);
-  --color-content-highlight: #1a75ff;
+  --color-content-highlight: var(--color-light-text-highlight);
   --color-white: #fff;
-  --color-highlight: #1a75ff;
+  --color-highlight: var(--color-light-text-highlight);
   --color-blue-grey: #292a2e;
   --color-border: #522785;
 

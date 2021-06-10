@@ -9,6 +9,7 @@
 }
 
 .toc-menu {
+  color: var(--color-light-text-secondary);
   width: auto;
   margin-bottom: 1.5rem;
   padding: 0.5rem;
@@ -22,9 +23,9 @@
 }
 
 .toc .toc-menu h3 {
-  font-size: 0.9375rem;
-  font-weight: var(--body-font-weight-bold);
+  font-size: 0.777rem;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .toc-menu a {
@@ -41,8 +42,7 @@
 }
 
 .toc-menu a.is-active {
-  font-weight: var(--body-font-weight-bold);
-  letter-spacing: -0.008em;
+  color: var(--color-light-text-body);
 }
 
 @media screen and (min-width: 1024px) {
