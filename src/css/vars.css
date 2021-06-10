@@ -78,7 +78,9 @@
   --nav-background: var(--panel-background);
   --nav-border-color: var(--color-gray-10);
   --nav-line-height: 1.35;
-  --nav-heading-font-color: var(--color-jet-30);
+  --nav-font-color: var(--color-light-text-secondary);
+  --nav-hover-font-color: var(--color-light-text-highlight);
+  --nav-current-page-font-color: var(--color-light-text-title);
   --nav-muted-color: var(--color-gray-70);
   --nav-panel-divider-color: var(--panel-border-color);
   --nav-secondary-background: var(--color-smoke-70);
@@ -99,20 +101,20 @@
   --tip-color: var(--color-smoke-70);
   --tip-on-color: #ed1e79;
   --warning-color: var(--color-smoke-70);
-  --warning-on-color: #d32f2f;
+  --warning-on-color: #F15A24;
   /* doc */
-  --doc-font-color: var(--color-jet-50);
+  --doc-font-color: var(--color-light-text-body);
   --doc-font-size: inherit;
   --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
   --doc-line-height: 1.6;
   --doc-margin: 0 auto;
   --doc-margin--desktop: 0 auto;
-  --heading-font-color: var(--color-jet-80);
+  --heading-font-color: var(--color-light-text-title);
   --heading-font-weight: normal;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
   --link-font-color: var(--color-content-highlight);
-  --link_hover-font-color: #1366e2;
+  --link_hover-font-color: var(--color-content-highlight);
   --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--color-smoke-70);
   --abstract-font-color: var(--color-jet-20);

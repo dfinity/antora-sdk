@@ -98,6 +98,7 @@ html.is-clipped--nav {
 }
 
 .nav-menu {
+  color: var(--nav-font-color);
   flex-grow: 1;
   min-height: 0;
   width: 100%;
@@ -107,15 +108,18 @@ html.is-clipped--nav {
 }
 
 .nav-menu h3.title {
-  color: var(--nav-heading-font-color);
   font-size: inherit;
   font-weight: var(--body-font-weight-bold);
   margin: 0;
   padding: 0.25em 0 0.125em;
+  text-transform: uppercase;
 }
 
 .nav-menu a {
   color: inherit;
+}
+.nav-menu a:hover {
+  color: var(--nav-hover-font-color);
 }
 
 .nav-list {
@@ -165,7 +169,7 @@ html.is-clipped--nav {
 
 .is-current-page > .nav-link,
 .is-current-page > .nav-text {
-  font-weight: var(--body-font-weight-bold);
+  color: var(--nav-current-page-font-color);
 }
 
 .nav-panel-explore {
