@@ -48,6 +48,9 @@
 @media screen and (min-width: 1024px) {
   .toc {
     display: inline-table;
+  }
+  
+  .toc-menu {
     min-width: 10rem;
     max-width: 15rem;
     padding: 1rem 0;
