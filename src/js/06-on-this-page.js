@@ -69,7 +69,7 @@
   function handleClick(event) {
     event.preventDefault();
 
-    var TOP_BAR_HEIGHT = 90;
+    var TOP_BAR_HEIGHT = 145;
     var href = event.target.hash;
     var id = href.slice(1, href.length);
     var element = document.getElementById(id);
@@ -94,10 +94,12 @@
 
     // Calculate scroll offsets
     var targetPosition = 0;
+    var toolbar = document.querySelector(".toolbar");
 
     var activeFragment;
     headings.some(function(heading) {
-      var actualPosition = targetPosition + window.scrollY;
+      var actualPosition =
+        targetPosition + toolbar.offsetTop + toolbar.offsetHeight;
       // heading.offsetHeight / 2 seems to deal with problems of inexact scrolling
       var headingPosition = heading.offsetTop - heading.offsetHeight / 2;
       if (headingPosition < actualPosition) {

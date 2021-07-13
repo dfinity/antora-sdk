@@ -54,6 +54,6 @@
     padding: 1rem 0;
     position: sticky;
     align-self: flex-start;
-    top: 6rem;
+    top: calc(var(--toolbar-height) + 6rem);
   }
 }
