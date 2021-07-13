@@ -47,7 +47,7 @@
   // Create the menu header
   var title = document.createElement("h3");
   title.textContent = "On this page";
-  
+
   // Add our new title and list to the menu
   menu.appendChild(title);
   menu.appendChild(list);
@@ -61,15 +61,15 @@
   }
 
   /**
-   * Hijack the menu item link behavior to create a smooth scroll to 
+   * Hijack the menu item link behavior to create a smooth scroll to
    * the selected heading without refreshing the page
-   * 
+   *
    * @param {obj} event The click event.
    */
   function handleClick(event) {
     event.preventDefault();
 
-    var TOP_BAR_HEIGHT = 145;
+    var TOP_BAR_HEIGHT = 90;
     var href = event.target.hash;
     var id = href.slice(1, href.length);
     var element = document.getElementById(id);
@@ -79,7 +79,7 @@
       window.scrollBy({
         top: top - TOP_BAR_HEIGHT,
         left: 0,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   }
@@ -94,11 +94,10 @@
 
     // Calculate scroll offsets
     var targetPosition = 0;
-    var toolbar = document.querySelector(".toolbar");
+
     var activeFragment;
     headings.some(function(heading) {
-      var actualPosition =
-        targetPosition + toolbar.offsetTop + toolbar.offsetHeight;
+      var actualPosition = targetPosition + window.scrollY;
       // heading.offsetHeight / 2 seems to deal with problems of inexact scrolling
       var headingPosition = heading.offsetTop - heading.offsetHeight / 2;
       if (headingPosition < actualPosition) {
@@ -108,7 +107,7 @@
       }
     });
 
-    // Add an active class on the menu so we can set styles on the 
+    // Add an active class on the menu so we can set styles on the
     // last heading to hit the top of the target position
     if (activeFragment) {
       if (activeFragment !== lastActiveFragment) {
@@ -126,7 +125,6 @@
         lastActiveFragment = activeFragment;
       }
     } else if (lastActiveFragment) {
-
       // Remove previously set active classes from non-active elements
       links[lastActiveFragment].classList.remove("is-active");
       lastActiveFragment = undefined;
@@ -145,7 +143,7 @@
 
   /**
    * Convert a NodeList using the Array context
-   * 
+   *
    * @param {obj}
    * @return {array} The converted NodeList as an array.
    */
