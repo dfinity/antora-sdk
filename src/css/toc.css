@@ -43,6 +43,7 @@
 
 .toc-menu a.is-active {
   color: var(--color-light-text-body);
+  font-weight: bold;
 }
 
 @media screen and (min-width: 1024px) {
@@ -52,6 +53,7 @@
     max-width: 15rem;
     padding: 1rem 0;
     position: sticky;
-    top: calc(var(--toolbar-height) + 6rem);
+    align-self: flex-start;
+    top: 6rem;
   }
 }
