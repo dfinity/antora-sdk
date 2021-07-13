@@ -16,7 +16,7 @@
 }
 
 .toc .toc-menu ul {
-  font-size: 0.875rem;
+  font-size: calc(15 / var(--rem-base) * 1rem);
   line-height: 2;
   list-style: none;
   padding: 0;
