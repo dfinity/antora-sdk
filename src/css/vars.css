@@ -1,13 +1,13 @@
 :root {
   /* DFINITY VARIABLES */
   --navivation-height: 80px;
-  --nav-width: 250px;
+  --nav-width: 200px;
 
   /* Colors from https://www.figma.com/file/768l7kxM3F3YLvHoTBnAhz/SDK-2021?node-id=415%3A768 */
   --color-light-text-title: #000000;
   --color-light-text-body: #181719;
   --color-light-text-secondary: #616161;
-  --color-light-text-highlight: #3C84F1;
+  --color-light-text-highlight: #3c84f1;
 
   --color-content-primary: rgba(51, 51, 51, 1);
   --color-content-secondary: #91939b;
@@ -48,14 +48,15 @@
   --color-black: #000;
   /* fonts */
   --rem-base: 16; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
-  --body-font-size: 1em; /* 17px */
-  --body-font-size--desktop: 1.125em; /* 18px */
+  --body-font-size: 16px; /* 17px */
+  --body-font-size--desktop: 16px; /* 18px */
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
   --body-font-color: var(--color-jet-70);
-  --body-font-family: "CircularXX", sans-serif;
+  --body-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Ubuntu, sans-serif;
   --body-font-weight-bold: 500;
-  --monospace-font-family: "Fira Code", monospace;
+  --monospace-font-family: monospace;
   --monospace-font-weight-bold: 600;
   /* base */
   --body-background: var(--color-white);
@@ -101,11 +102,11 @@
   --tip-color: var(--color-smoke-70);
   --tip-on-color: #ed1e79;
   --warning-color: var(--color-smoke-70);
-  --warning-on-color: #F15A24;
+  --warning-on-color: #f15a24;
   /* doc */
   --doc-font-color: var(--color-light-text-body);
   --doc-font-size: inherit;
-  --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
+  --doc-font-size--desktop: inherit;
   --doc-line-height: 1.6;
   --doc-margin: 0 auto;
   --doc-margin--desktop: 0 auto;
@@ -156,7 +157,7 @@
   --nav-panel-height--desktop: calc(
     var(--nav-height--desktop) - var(--drawer-height)
   );
-  --nav-width: calc(270 / var(--rem-base) * 1rem);
+  --nav-width: calc(240 / var(--rem-base) * 1rem);
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
   --doc-max-width--desktop: calc(920 / var(--rem-base) * 1rem);
   /* stacking */

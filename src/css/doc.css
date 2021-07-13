@@ -44,7 +44,7 @@
 
 #preamble + .sect1,
 .doc .sect1 + .sect1 {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .doc h1.sect0 {
@@ -152,7 +152,7 @@
 }
 
 .doc pre {
-  font-size: calc(16 / var(--rem-base) * 1rem);
+  font-size: calc(15 / var(--rem-base) * 1rem);
   line-height: 1.5;
   margin: 0;
 }
@@ -484,7 +484,7 @@
 }
 
 .doc .literalblock .content > pre {
-    background: var(--color-white);
+  background: var(--color-white);
 }
 
 .doc .imageblock .title {

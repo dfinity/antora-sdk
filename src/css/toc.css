@@ -16,7 +16,7 @@
 }
 
 .toc .toc-menu ul {
-  font-size: 0.875rem;
+  font-size: calc(15 / var(--rem-base) * 1rem);
   line-height: 2;
   list-style: none;
   padding: 0;
@@ -43,6 +43,7 @@
 
 .toc-menu a.is-active {
   color: var(--color-light-text-body);
+  font-weight: bold;
 }
 
 @media screen and (min-width: 1024px) {
@@ -52,6 +53,7 @@
     max-width: 15rem;
     padding: 1rem 0;
     position: sticky;
+    align-self: flex-start;
     top: calc(var(--toolbar-height) + 6rem);
   }
 }
