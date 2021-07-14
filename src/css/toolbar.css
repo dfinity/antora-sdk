@@ -29,6 +29,10 @@
   margin-right: -0.25rem;
 }
 
+body.dark-mode .nav-toggle {
+  background-image: url(../img/menu-dark.svg);
+}
+
 .edit-icon {
   fill: var(--toolbar-muted-color);
   width: 20px;

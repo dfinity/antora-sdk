@@ -1,0 +1,31 @@
+<script>
+  function switchToLightMode(persist) {
+    document.querySelector("body").classList.remove("dark-mode");
+    if (persist) {
+      localStorage.setItem("theme-preference", "light");
+    }
+  }
+  function switchToDarkMode(persist) {
+    document.querySelector("body").classList.add("dark-mode");
+    if (persist) {
+      localStorage.setItem("theme-preference", "dark");
+    }
+  }
+
+  var themePreference = localStorage.getItem("theme-preference");
+
+  if (themePreference == "dark") {
+    switchToDarkMode(false);
+  } else if (themePreference == "light") {
+    switchToLightMode(false);
+  } else {
+    try {
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        switchToDarkMode(false);
+      }
+    } catch {}
+  }
+</script>

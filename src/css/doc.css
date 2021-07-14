@@ -243,8 +243,8 @@
 
 .doc .admonitionblock {
   margin: 1.5rem 0 0;
-  border-left: 3px solid var(--note-color);
-  border-top: 3px solid var(--note-color);
+  border-left: 3px solid var(--admonition-border);
+  border-top: 3px solid var(--admonition-border);
 }
 
 .doc .admonitionblock p,
@@ -290,27 +290,27 @@
 
 .doc .admonitionblock.caution .icon {
   color: var(--caution-on-color);
-  background-color: var(--color-white);
+  background-color: var(--admonition-icon-background);
 }
 
 .doc .admonitionblock.important .icon {
   color: var(--important-on-color);
-  background-color: var(--color-white);
+  background-color: var(--admonition-icon-background);
 }
 
 .doc .admonitionblock.note .icon {
   color: var(--note-on-color);
-  background-color: var(--color-white);
+  background-color: var(--admonition-icon-background);
 }
 
 .doc .admonitionblock.tip .icon {
   color: var(--tip-on-color);
-  background-color: var(--color-white);
+  background-color: var(--admonition-icon-background);
 }
 
 .doc .admonitionblock.warning .icon {
   color: var(--warning-on-color);
-  background-color: var(--color-white);
+  background-color: var(--admonition-icon-background);
 }
 
 .doc .admonitionblock .icon i {
@@ -339,6 +339,18 @@
 .doc .image > img {
   height: auto;
   max-width: 100%;
+}
+
+body.dark-mode .doc img {
+  background-color: var(--color-white);
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 3px;
+}
+
+body.dark-mode .doc .imageblock img {
+  margin: 0;
+  display: block;
 }
 
 .doc .hack > .content {
@@ -498,6 +510,7 @@
 
 .doc .exampleblock > .content {
   background: var(--example-background);
+  color: var(--example-font-color);
   border: 0.25rem solid var(--example-border-color);
   border-radius: 0.5rem;
   padding: 0.75rem;
@@ -509,6 +522,7 @@
 
 .doc .sidebarblock {
   background: var(--sidebar-background);
+  color: var(--sidebar-font-color);
   border-radius: 0.75rem;
   padding: 0.75rem 1.5rem;
 }
@@ -534,6 +548,7 @@
 .doc pre:not(.highlight),
 .doc pre.highlight code {
   background: var(--pre-background);
+  color: var(--pre-font-color);
   box-shadow: 0 0 0 1px var(--pre-border-color);
   display: block;
   overflow-x: auto;

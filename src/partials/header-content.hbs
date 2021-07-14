@@ -3,6 +3,7 @@
     <div class="navbar-brand">
       <a class="logo-container" href="https://dfinity.org/">
         <img class="header-logo" src="{{uiRootPath}}/img/logo.svg">
+        <img class="header-logo dark" src="{{uiRootPath}}/img/logo-dark.svg">
         <h1 class="header-title">{{site.title}}</h1>
       </a>
     </div>
@@ -13,6 +14,8 @@
         <span></span>
         <span></span>
       </button>
+      <button class="to-light-mode" aria-label="switch to light mode" onclick="switchToLightMode(true)"></button>
+      <button class="to-dark-mode" aria-label="switch to dark mode" onclick="switchToDarkMode(true)"></button>
       <div id="topbar-nav" class="navbar-menu">
         <div class="navbar-end">
           <a class="navbar-item" target="blank" href="https://forum.dfinity.org/">Forum</a>
@@ -24,5 +27,6 @@
         </div>
       </div>
     </div>
+    <div class="gradient-decoration"></div>
   </nav>
 </header>
