@@ -108,11 +108,11 @@ html.is-clipped--nav {
 }
 
 .nav-menu h3.title {
-  font-size: inherit;
+  font-size: 1rem;
   font-weight: var(--body-font-weight-bold);
+  color: var(--nav-title-color);
   margin: 0;
   padding: 0.25em 0 0.125em;
-  text-transform: uppercase;
 }
 
 .nav-menu a {
@@ -123,8 +123,18 @@ html.is-clipped--nav {
 }
 
 .nav-list {
-  margin: 0 0 0 0.75rem;
+  margin: 0;
   padding: 0;
+}
+
+.nav-list .nav-list .nav-list .nav-item {
+  padding-left: 10px;
+  border-left: 1px solid var(--panel-border-color);
+}
+
+.nav-list .nav-list .nav-list .nav-item.is-current-page,
+.nav-list .nav-list .nav-list .nav-text.is-current-page {
+  border-left: 1px solid var(--color-meteorite-500);
 }
 
 .nav-menu > .nav-list {
@@ -133,12 +143,17 @@ html.is-clipped--nav {
 
 .nav-item {
   list-style: none;
-  margin-top: 0.9em;
+}
+
+.nav-item {
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
 }
 
 /* adds some breathing room below a nested list */
 .nav-item-toggle ~ .nav-list {
   padding-bottom: 0.125rem;
+  margin-top: 0.45rem;
 }
 
 /* matches list without a title */
@@ -152,15 +167,15 @@ html.is-clipped--nav {
 }
 
 .nav-item-toggle {
-  background: transparent url(../img/caret.svg) no-repeat center / 6px;
+  background: transparent url(../img/caret.svg) no-repeat center / 16px;
   border: none;
   outline: none;
   line-height: inherit;
   position: absolute;
+  right: 0;
   height: calc(var(--nav-line-height) * 1em);
   width: calc(var(--nav-line-height) * 1em);
   margin-top: -0.05em;
-  margin-left: calc(var(--nav-line-height) * -1em);
 }
 
 .nav-item.is-active > .nav-item-toggle {
