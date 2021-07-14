@@ -9,7 +9,7 @@ body {
 .navbar {
   background: var(--navbar-background);
   color: var(--navbar-font-color);
-  font-size: calc(16 / var(--rem-base) * 1rem);
+  font-size: calc(15 / var(--rem-base) * 1rem);
   height: var(--navbar-height);
   position: fixed;
   top: 0;
@@ -22,8 +22,8 @@ body {
 }
 
 .header-logo {
-  width: 40px;
-  margin-right: 1em;
+  height: 32px;
+  margin-right: 0.5rem;
 }
 
 .header-logo.dark {
@@ -39,8 +39,9 @@ body.dark-mode .header-logo.dark {
 }
 
 .header-title {
-  font-size: 12px;
-  letter-spacing: 4px;
+  font-size: 11px;
+  line-height: 24px;
+  letter-spacing: 0.15em;
 }
 
 .nav-items-wrapper {
@@ -48,15 +49,19 @@ body.dark-mode .header-logo.dark {
   align-items: center;
 }
 
+.navbar-menu.is-active .navbar-item {
+  color: var(--color-gray-700);
+}
+
 @media screen and (min-width: 500px) {
   .header-logo {
-    width: 60px;
-    margin-right: 1em;
+    margin-right: 0.5rem;
   }
 
   .header-title {
-    font-size: 0.875em;
-    letter-spacing: 2px;
+    font-size: 11px;
+    line-height: 24px;
+    letter-spacing: 0.15em;
   }
 }
 
@@ -88,17 +93,17 @@ body.dark-mode .header-logo.dark {
 
 @media screen and (min-width: 1024px) {
   .header-logo {
-    width: 80px;
+    height: 32px;
   }
 
-  .navbar-end > .navbar-item,
-  .navbar-end .navbar-link {
-    color: var(--navbar-font-color);
-    opacity: 0.5;
+  #topbar-nav > .navbar-item,
+  #topbar-nav .navbar-link {
+    color: var(--navbar-menu-font-color);
+    opacity: 0.7;
   }
 
-  .navbar-end > a.navbar-item:hover,
-  .navbar-end .navbar-link:hover {
+  #topbar-nav > a.navbar-item:hover,
+  #topbar-nav .navbar-link:hover {
     opacity: 1;
   }
 
@@ -186,6 +191,8 @@ body.dark-mode .header-logo.dark {
 
 .navbar-item {
   flex: none;
+  position: relative;
+  top: -2px;
 }
 
 .navbar-item:last-child {
@@ -333,6 +340,10 @@ body.dark-mode .header-logo.dark {
   }
 }
 
+#topbar-nav {
+  margin-left: 40px;
+}
+
 .navbar .button {
   display: inline-flex;
   align-items: center;
@@ -362,6 +373,7 @@ body.dark-mode .header-logo.dark {
 
 .to-light-mode,
 .to-dark-mode {
+  display: none;
   appearance: none;
   background-color: transparent;
   border: none;
@@ -382,4 +394,11 @@ body.dark-mode .to-dark-mode {
 }
 body:not(.dark-mode) .to-light-mode {
   display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .to-light-mode,
+  .to-dark-mode {
+    display: inline;
+  }
 }
