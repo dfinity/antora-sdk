@@ -24,6 +24,10 @@
   z-index: var(--z-index-page-version-menu);
 }
 
+body.dark-mode .page-versions .version-menu-toggle {
+  background-image: url(../img/chevron-dark.svg);
+}
+
 .page-versions .version-menu {
   border: 1px solid transparent;
   background-color: var(--page-version-menu-background);

@@ -39,7 +39,7 @@ module.exports = (src, dest, preview) => () => {
         }
       }
     ]),
-    postcssVar({ preserve: preview ? "preserve-computed" : false }),
+    postcssVar(/*{ preserve: preview ? "preserve-computed" : false }*/),
     preview ? postcssCalc : () => {},
     autoprefixer,
     preview ? () => {} : cssnano({ preset: "default" })

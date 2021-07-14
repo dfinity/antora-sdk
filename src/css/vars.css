@@ -4,10 +4,6 @@
   --nav-width: 200px;
 
   /* Colors from https://www.figma.com/file/768l7kxM3F3YLvHoTBnAhz/SDK-2021?node-id=415%3A768 */
-  --color-light-text-title: #000000;
-  --color-light-text-body: #181719;
-  --color-light-text-secondary: #616161;
-  --color-light-text-highlight: #3c84f1;
 
   --color-gray-050: #efefef;
   --color-gray-100: #d9d9da;
@@ -80,6 +76,11 @@
   --color-meteorite-800: #300e5b;
   --color-meteorite-900: #25054d;
 
+  --color-light-text-title: var(--color-gray-900);
+  --color-light-text-body: #181719;
+  --color-light-text-secondary: #616161;
+  --color-light-text-highlight: #3c84f1;
+
   --color-content-primary: rgba(51, 51, 51, 1);
   --color-content-secondary: #91939b;
   --color-content-white: #fff;
@@ -116,7 +117,7 @@
   --color-jet-50: #333;
   --color-jet-70: #222;
   --color-jet-80: #191919;
-  --color-black: #000;
+  --color-black: #18171a;
   /* fonts */
   --rem-base: 16; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 16px; /* 17px */
@@ -154,6 +155,8 @@
   --nav-hover-font-color: var(--color-light-text-highlight);
   --nav-current-page-font-color: var(--color-gray-900);
   --nav-title-color: var(--color-gray-900);
+  --nav-child-list-border-color: #5227851a;
+  --nav-current-page-border-color: var(--color-meteorite-500);
   --nav-muted-color: var(--color-gray-70);
   --nav-panel-divider-color: var(--panel-border-color);
   --nav-secondary-background: var(--color-smoke-70);
@@ -165,6 +168,9 @@
   --page-version-menu-background: var(--color-smoke-70);
   --page-version-missing-font-color: var(--color-gray-30);
   /* admonitions */
+  --admonition-background: var(--color-white);
+  --admonition-icon-background: var(--color-white);
+  --admonition-border: var(--note-color);
   --caution-color: var(--color-smoke-70);
   --caution-on-color: #522785;
   --important-color: var(--color-smoke-70);
@@ -199,9 +205,12 @@
   --code-background: var(--panel-background);
   /*--code-font-color: var(--body-font-color);*/
   --code-font-color: #800311;
+  --pre-font-color: var(--color-gray-900);
   --example-background: var(--color-white);
+  --example-font-color: var(--color-gray-900);
   --example-border-color: var(--color-gray-70);
   --kbd-background: var(--panel-background);
+  --kbd-font-color: var(--color-light-text-body);
   --kbd-border-color: var(--color-gray-10);
   --pre-background: var(--color-smoke-50);
   --pre-border-color: var(--color-smoke-90);
@@ -211,10 +220,11 @@
   --quote-font-color: var(--color-gray-70);
   --quote-attribution-font-color: var(--color-gray-30);
   --sidebar-background: var(--color-smoke-90);
+  --sidebar-font-color: var(--color-gray-900);
   --table-border-color: var(--panel-border-color);
   /* footer */
   --footer-line-height: var(--doc-line-height);
-  --footer-background: var(--color-smoke-90);
+  --footer-background: var(--color-blue-gray);
   --footer-font-color: var(--color-gray-70);
   --footer-link-font-color: var(--color-jet-80);
   /* dimensions */
@@ -237,4 +247,52 @@
   --z-index-toolbar: 3;
   --z-index-page-version-menu: 4;
   --z-index-navbar: 5;
+}
+
+body.dark-mode {
+  --color-light-text-title: var(--color-white);
+  --color-light-text-body: var(--color-white);
+  --color-light-text-secondary: var(--color-gray-200);
+  --color-light-text-highlight: var(--color-seabuckthorn-500);
+
+  --body-background: var(--color-black);
+  --navbar-background: var(--color-gray-900);
+  --nav-background: var(--color-black);
+  --toolbar-background: var(--color-black);
+  --panel-background: var(--color-black);
+  --panel-border-color: var(--color-gray-800);
+  --toolbar-border-color: var(--color-gray-800);
+  --nav-panel-divider-color: var(--color-gray-800);
+
+  --nav-title-color: var(--color-white);
+  --nav-muted-color: var(--color-gray-200);
+  --nav-current-page-font-color: var(--color-white);
+
+  --nav-child-list-border-color: #fbb03b1a;
+  --nav-current-page-border-color: var(--color-seabuckthorn-500);
+
+  --nav-font-color: var(--color-light-text-secondary);
+  --navbar-font-color: var(--color-gray-050);
+  --toolbar-font-color: var(--color-gray-050);
+
+  --heading-font-color: var(--color-white);
+  --doc-font-color: var(--color-gray-050);
+
+  --admonition-background: transparent;
+  --admonition-icon-background: var(--color-black);
+  --admonition-border: var(--color-gray-800);
+
+  --caption-font-color: var(--color-white);
+  --code-font-color: var(--color-flamingo-500);
+  --code-background: var(--color-gray-800);
+
+  --link-font-color: var(--color-seabuckthorn-500);
+  --sidebar-background: var(--color-gray-800);
+  --sidebar-font-color: var(--color-gray-050);
+
+  --kbd-background: var(--color-gray-600);
+  --kbd-font-color: var(--color-gray-050);
+  --kbd-border-color: var(--color-gray-600);
+
+  --footer-background: var(--color-gray-900);
 }
