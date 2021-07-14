@@ -4,7 +4,79 @@
   --nav-width: 200px;
 
   /* Colors from https://www.figma.com/file/768l7kxM3F3YLvHoTBnAhz/SDK-2021?node-id=415%3A768 */
-  --color-light-text-title: #000000;
+
+  --color-gray-050: #efefef;
+  --color-gray-100: #d9d9da;
+  --color-gray-200: #c3c3c4;
+  --color-gray-300: #adadaf;
+  --color-gray-400: #979799;
+  --color-gray-500: #818284;
+  --color-gray-600: #6b6c6e;
+  --color-gray-700: #555659;
+  --color-gray-800: #3f4043;
+  --color-gray-900: #292a2e;
+  --color-azureradiance-050: #ebf0fa;
+  --color-azureradiance-100: #c7d9f9;
+  --color-azureradiance-200: #a3c3f9;
+  --color-azureradiance-300: #80acf8;
+  --color-azureradiance-400: #5c96f8;
+  --color-azureradiance-500: #387ff7;
+  --color-azureradiance-600: #2b67cd;
+  --color-azureradiance-700: #1f4fa2;
+  --color-azureradiance-800: #123778;
+  --color-azureradiance-900: #051f4d;
+  --color-seabuckthorn-050: #fff5e5;
+  --color-seabuckthorn-100: #fee7c3;
+  --color-seabuckthorn-200: #fdd9a1;
+  --color-seabuckthorn-300: #fdcc7f;
+  --color-seabuckthorn-400: #fcbe5d;
+  --color-seabuckthorn-500: #fbb03b;
+  --color-seabuckthorn-600: #d2912c;
+  --color-seabuckthorn-700: #a9731e;
+  --color-seabuckthorn-800: #80540f;
+  --color-seabuckthorn-900: #573500;
+  --color-flamingo-050: #ffece5;
+  --color-flamingo-100: #fccfbf;
+  --color-flamingo-200: #f9b298;
+  --color-flamingo-300: #f79471;
+  --color-flamingo-400: #f4774b;
+  --color-flamingo-500: #f15a24;
+  --color-flamingo-600: #cf4c1d;
+  --color-flamingo-700: #ad3e16;
+  --color-flamingo-800: #8a2f0e;
+  --color-flamingo-900: #682107;
+  --color-razzmatazz-050: #f7dfe9;
+  --color-razzmatazz-100: #f5b8d3;
+  --color-razzmatazz-200: #f392bc;
+  --color-razzmatazz-300: #f16ba6;
+  --color-razzmatazz-400: #ef458f;
+  --color-razzmatazz-500: #ed1e79;
+  --color-razzmatazz-600: #cb1866;
+  --color-razzmatazz-700: #aa1154;
+  --color-razzmatazz-800: #880b41;
+  --color-razzmatazz-900: #66042f;
+  --color-piction-050: #f0faff;
+  --color-piction-100: #c8ebf9;
+  --color-piction-200: #a0dbf3;
+  --color-piction-300: #78cbee;
+  --color-piction-400: #51bbe8;
+  --color-piction-500: #29abe2;
+  --color-piction-600: #1f89b8;
+  --color-piction-700: #15678d;
+  --color-piction-800: #0a4563;
+  --color-piction-900: #002338;
+  --color-meteorite-050: #f2ebfa;
+  --color-meteorite-100: #d0c4e2;
+  --color-meteorite-200: #b29dcb;
+  --color-meteorite-300: #9275b4;
+  --color-meteorite-400: #724e9c;
+  --color-meteorite-500: #522785;
+  --color-meteorite-600: #471f77;
+  --color-meteorite-700: #3c1669;
+  --color-meteorite-800: #300e5b;
+  --color-meteorite-900: #25054d;
+
+  --color-light-text-title: var(--color-gray-900);
   --color-light-text-body: #181719;
   --color-light-text-secondary: #616161;
   --color-light-text-highlight: #3c84f1;
@@ -16,7 +88,7 @@
   --color-content-highlight: var(--color-light-text-highlight);
   --color-white: #fff;
   --color-highlight: var(--color-light-text-highlight);
-  --color-blue-grey: #292a2e;
+  --color-blue-gray: #292a2e;
   --color-border: #522785;
 
   --spacing-xs: 1em;
@@ -45,7 +117,7 @@
   --color-jet-50: #333;
   --color-jet-70: #222;
   --color-jet-80: #191919;
-  --color-black: #000;
+  --color-black: #18171a;
   /* fonts */
   --rem-base: 16; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 16px; /* 17px */
@@ -55,7 +127,7 @@
   --body-font-color: var(--color-jet-70);
   --body-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Ubuntu, sans-serif;
-  --body-font-weight-bold: 500;
+  --body-font-weight-bold: 700;
   --monospace-font-family: monospace;
   --monospace-font-weight-bold: 600;
   /* base */
@@ -65,13 +137,15 @@
   /* navbar */
   --navbar-background: var(--color-white);
   --navbar-font-color: var(--color-content-primary);
+  --navbar-search-placeholder-color: var(--color-gray-700);
+
   /* --navbar_hover-background: var(--color-black); */
   --navbar-button-background: var(--color-white);
   --navbar-button-border-color: var(--panel-border-color);
   --navbar-button-font-color: var(--body-font-color);
   --navbar-menu-border-color: var(--panel-border-color);
   --navbar-menu-background: var(--color-white);
-  --navbar-menu-font-color: var(--body-font-color);
+  --navbar-menu-font-color: var(--color-gray-700);
   --navbar-menu_hover-background: var(--color-smoke-50);
   --input-background-color: var(--color-smoke-50);
   --input-border-color: var(--color-smoke-90);
@@ -81,7 +155,10 @@
   --nav-line-height: 1.35;
   --nav-font-color: var(--color-light-text-secondary);
   --nav-hover-font-color: var(--color-light-text-highlight);
-  --nav-current-page-font-color: var(--color-light-text-title);
+  --nav-current-page-font-color: var(--color-gray-900);
+  --nav-title-color: var(--color-gray-900);
+  --nav-child-list-border-color: #5227851a;
+  --nav-current-page-border-color: var(--color-meteorite-500);
   --nav-muted-color: var(--color-gray-70);
   --nav-panel-divider-color: var(--panel-border-color);
   --nav-secondary-background: var(--color-smoke-70);
@@ -93,16 +170,19 @@
   --page-version-menu-background: var(--color-smoke-70);
   --page-version-missing-font-color: var(--color-gray-30);
   /* admonitions */
+  --admonition-background: var(--color-white);
+  --admonition-icon-background: var(--color-white);
+  --admonition-border: var(--note-color);
   --caution-color: var(--color-smoke-70);
-  --caution-on-color: #522785;
+  --caution-on-color: var(--color-meteorite-300);
   --important-color: var(--color-smoke-70);
-  --important-on-color: #fbb03b;
+  --important-on-color: var(--color-seabuckthorn-500);
   --note-color: var(--color-smoke-70);
-  --note-on-color: #29abe2;
+  --note-on-color: #2aace2;
   --tip-color: var(--color-smoke-70);
   --tip-on-color: #ed1e79;
   --warning-color: var(--color-smoke-70);
-  --warning-on-color: #f15a24;
+  --warning-on-color: #f15a23;
   /* doc */
   --doc-font-color: var(--color-light-text-body);
   --doc-font-size: inherit;
@@ -127,9 +207,12 @@
   --code-background: var(--panel-background);
   /*--code-font-color: var(--body-font-color);*/
   --code-font-color: #800311;
+  --pre-font-color: var(--color-gray-900);
   --example-background: var(--color-white);
+  --example-font-color: var(--color-gray-900);
   --example-border-color: var(--color-gray-70);
   --kbd-background: var(--panel-background);
+  --kbd-font-color: var(--color-light-text-body);
   --kbd-border-color: var(--color-gray-10);
   --pre-background: var(--color-smoke-50);
   --pre-border-color: var(--color-smoke-90);
@@ -139,10 +222,11 @@
   --quote-font-color: var(--color-gray-70);
   --quote-attribution-font-color: var(--color-gray-30);
   --sidebar-background: var(--color-smoke-90);
+  --sidebar-font-color: var(--color-gray-900);
   --table-border-color: var(--panel-border-color);
   /* footer */
   --footer-line-height: var(--doc-line-height);
-  --footer-background: var(--color-smoke-90);
+  --footer-background: var(--color-blue-gray);
   --footer-font-color: var(--color-gray-70);
   --footer-link-font-color: var(--color-jet-80);
   /* dimensions */
@@ -157,7 +241,7 @@
   --nav-panel-height--desktop: calc(
     var(--nav-height--desktop) - var(--drawer-height)
   );
-  --nav-width: calc(240 / var(--rem-base) * 1rem);
+  --nav-width: calc(280 / var(--rem-base) * 1rem);
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
   --doc-max-width--desktop: calc(920 / var(--rem-base) * 1rem);
   /* stacking */
@@ -165,4 +249,58 @@
   --z-index-toolbar: 3;
   --z-index-page-version-menu: 4;
   --z-index-navbar: 5;
+}
+
+body.dark-mode {
+  --color-light-text-title: var(--color-white);
+  --color-light-text-body: var(--color-white);
+  --color-light-text-secondary: var(--color-gray-200);
+  --color-light-text-highlight: var(--color-seabuckthorn-500);
+
+  --body-background: var(--color-black);
+  --navbar-background: var(--color-gray-900);
+  --nav-background: var(--color-black);
+  --toolbar-background: var(--color-black);
+  --panel-background: var(--color-black);
+  --panel-border-color: var(--color-gray-800);
+  --toolbar-border-color: var(--color-gray-800);
+  --nav-panel-divider-color: var(--color-gray-800);
+
+  --nav-title-color: var(--color-white);
+  --nav-muted-color: var(--color-gray-200);
+  --nav-current-page-font-color: var(--color-white);
+
+  --nav-child-list-border-color: #fbb03b1a;
+  --nav-current-page-border-color: var(--color-seabuckthorn-500);
+
+  --nav-font-color: var(--color-light-text-secondary);
+  --nav-hover-font-color: var(--color-seabuckthorn-500);
+  --navbar-font-color: var(--color-gray-050);
+  --navbar-menu-font-color: var(--color-gray-200);
+  --toolbar-font-color: var(--color-gray-050);
+
+  --heading-font-color: var(--color-white);
+  --doc-font-color: var(--color-gray-050);
+
+  --admonition-background: transparent;
+  --admonition-icon-background: var(--color-black);
+  --admonition-border: var(--color-gray-800);
+
+  --caption-font-color: var(--color-white);
+  --code-font-color: var(--color-flamingo-500);
+  --code-background: var(--color-gray-800);
+
+  --color-content-highlight: var(--color-seabuckthorn-500);
+
+  --link-font-color: var(--color-seabuckthorn-500);
+  --link_hover-font-color: var(--color-seabuckthorn-500);
+  --sidebar-background: var(--color-gray-800);
+  --sidebar-font-color: var(--color-gray-050);
+
+  --kbd-background: var(--color-gray-600);
+  --kbd-font-color: var(--color-gray-050);
+  --kbd-border-color: var(--color-gray-600);
+
+  --footer-background: var(--color-gray-900);
+  --navbar-search-placeholder-color: var(--color-gray-700);
 }

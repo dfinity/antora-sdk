@@ -3,26 +3,32 @@
     <div class="navbar-brand">
       <a class="logo-container" href="https://dfinity.org/">
         <img class="header-logo" src="{{uiRootPath}}/img/logo.svg">
+        <img class="header-logo dark" src="{{uiRootPath}}/img/logo-dark.svg">
         <h1 class="header-title">{{site.title}}</h1>
       </a>
     </div>
+    <div id="topbar-nav" class="navbar-menu">
+          <a class="navbar-item" target="blank" href="https://forum.dfinity.org/">Forum</a>
+          <!--<a class="navbar-item" target="blank" href="mailto:support@dfinity.org?subject=Feedback - SDK Developer Center">Email us</a>-->
+          <a class="navbar-item" target="blank" href="https://support.dfinity.org/">Support</a>          
+          <a class="navbar-item" target="blank" href="https://www.twitter.com/dfinitydev">
+            <img class="light-only" src="{{uiRootPath}}/img/social/twitter-icon.svg">
+            <img class="dark-only" src="{{uiRootPath}}/img/social/twitter-icon-dark.svg">
+          </a>
+      </div>
     <div class="nav-items-wrapper">
+      <button class="to-light-mode dark-only" aria-label="switch to light mode" onclick="switchToLightMode(true)"></button>
+      <button class="to-dark-mode light-only" aria-label="switch to dark mode" onclick="switchToDarkMode(true)"></button>
       {{> search}}
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <div id="topbar-nav" class="navbar-menu">
-        <div class="navbar-end">
-          <a class="navbar-item" target="blank" href="https://forum.dfinity.org/">Forum</a>
-          <!--<a class="navbar-item" target="blank" href="mailto:support@dfinity.org?subject=Feedback - SDK Developer Center">Email us</a>-->
-          <a class="navbar-item" target="blank" href="https://support.dfinity.org/">Support</a>          
-          <a class="navbar-item" target="blank" href="https://www.twitter.com/dfinitydev">
-            <img src="{{uiRootPath}}/img/social/twitter-icon.svg">
-          </a>
-        </div>
       </div>
-    </div>
+    {{!-- <div class="nav-items-wrapper"> --}}
+      
+    {{!-- </div> --}}
+    <div class="gradient-decoration"></div>
   </nav>
 </header>

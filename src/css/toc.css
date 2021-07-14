@@ -42,7 +42,7 @@
 }
 
 .toc-menu a.is-active {
-  color: var(--color-light-text-body);
+  color: var(--color-light-text-title);
   font-weight: bold;
 }
 
