@@ -19,13 +19,17 @@
   } else if (themePreference == "light") {
     switchToLightMode(false);
   } else {
-    try {
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        switchToDarkMode(false);
-      }
-    } catch {}
+    // dark mode by default
+    switchToDarkMode(false);
+
+    // uncomment to enable setting the defult by user preference
+    // try {
+    //   if (
+    //     window.matchMedia &&
+    //     window.matchMedia("(prefers-color-scheme: dark)").matches
+    //   ) {
+    //     switchToDarkMode(false);
+    //   }
+    // } catch {}
   }
 </script>
