@@ -5,8 +5,8 @@
   margin: var(--doc-margin);
   max-width: var(--doc-max-width);
   padding-bottom: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   min-width: 0;
 }
 
@@ -737,4 +737,12 @@ body.dark-mode .doc .imageblock img {
 
 .doc .tabs li.is-active::after {
   border-top: 2px solid var(--color-border);
+}
+
+body:not(.dark-mode) .dark-only {
+  display: none;
+}
+
+body.dark-mode .light-only {
+  display: none;
 }
