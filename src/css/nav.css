@@ -128,13 +128,13 @@ html.is-clipped--nav {
   padding: 0;
 }
 
-.nav-list .nav-list .nav-item {
+.nav-list .nav-list .nav-list .nav-item {
   padding-left: 10px;
   border-left: 1px solid var(--nav-child-list-border-color);
 }
 
-.nav-list .nav-list .nav-item.is-current-page,
-.nav-list .nav-list .nav-text.is-current-page {
+.nav-list .nav-list .nav-list .nav-item.is-current-page,
+.nav-list .nav-list .nav-list .nav-text.is-current-page {
   border-left: 1px solid var(--nav-current-page-border-color);
 }
 
@@ -155,6 +155,12 @@ html.is-clipped--nav {
 .nav-item-toggle ~ .nav-list {
   padding-bottom: 0.125rem;
   margin-top: 0.45rem;
+  padding-right: 0.75rem;
+}
+
+.nav-item[data-depth="1"] > .nav-link,
+.nav-item[data-depth="1"] > .nav-text {
+  font-weight: bold;
 }
 
 /* matches list without a title */
