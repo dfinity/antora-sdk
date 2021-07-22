@@ -81,7 +81,10 @@ function appendRun(element, config) {
   var parent = element.parentNode;
   var option;
   if (config.lineNumber) {
-    option = window.withLineNumbers(highlightCode);
+    option = window.withLineNumbers(highlightCode, {
+      backgroundColor: '#c8c8c8',
+      color: '#222'
+    });
   } else {
     option = highlightCode;
   }

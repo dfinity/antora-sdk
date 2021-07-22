@@ -18,15 +18,16 @@
 }
 
 .nav-toggle {
-  background: url(../img/menu.svg) no-repeat 50% 47.5%;
-  background-size: 49%;
+  background: url(../img/menu.svg) no-repeat;
+  background-size: 1.5rem;
+  background-position: 0 0.5rem;
+  color: var(--toolbar-font-color);
   border: none;
   outline: none;
   line-height: inherit;
   height: 2.5rem;
-  padding: 0;
-  width: 2.5rem;
-  margin-right: -0.25rem;
+  padding: 0 0 0 2rem;
+  margin-left: 0.75rem;
 }
 
 body.dark-mode .nav-toggle {
@@ -50,7 +51,6 @@ body.dark-mode .nav-toggle {
 
 .nav-toggle.is-active {
   background-image: url(../img/back.svg);
-  background-size: 41.5%;
 }
 
 .home-link {
