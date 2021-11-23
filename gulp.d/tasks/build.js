@@ -50,6 +50,7 @@ module.exports = (src, dest, preview) => () => {
       .src("js/+([0-9])-*.js", { ...opts, sourcemaps })
       .pipe(uglify())
       .pipe(concat("js/site.js")),
+    vfs.src("js/moc/*.js", opts),
     vfs
       .src("js/vendor/*.js", { ...opts, read: false })
       .pipe(
