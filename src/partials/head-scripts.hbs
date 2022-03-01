@@ -1,14 +1,6 @@
     <script>
         if (location.hostname === 'sdk.dfinity.org') {
             location.replace(location.href.replace("sdk.dfinity.org","smartcontracts.org"));
-            
-        } else if (!location.pathname.endsWith('.html') && !location.pathname.endsWith('/')) {
-            //
-            // cludflare prevents redirecting url's without a filename or trailing slash which breaks navigation
-            //
-            // eg. /docs/examples does not get redirected to /docs/examples/, and sidebar links that use 
-            // relative paths will break
-            location.replace(location.href+'/');
         }
     </script>
 
